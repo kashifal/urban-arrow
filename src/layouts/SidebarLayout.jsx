@@ -12,6 +12,7 @@ import {
   HomeIcon,
   XMarkIcon,
   MoonIcon,
+  ClipboardDocumentCheckIcon,
 } from "@heroicons/react/24/outline";
 import DashIcon from "../icons/DashIcon";
 import EquipIcon from "../icons/EquipIcons";
@@ -20,6 +21,7 @@ import InventoryIcon from "../icons/InventoryIcon";
 import MainIcon from "../icons/MainIcon";
 import TaskIcon from "../icons/TaskIcon";
 import TeamIcon from "../icons/TeamIcon";
+import MaintainsIcon from "../icons/Maintains";
 import UsersIcon from "../icons/Users";
 import {
   ChevronDownIcon,
@@ -27,94 +29,20 @@ import {
 } from "@heroicons/react/20/solid";
 import logo from "../assets/logo.png";
 import { Switch } from "../components/switch";
+import HealthIcon from "../icons/Health";
+import TeamsIcon from "../icons/TeamsIcon";
 const navigation = [
   {
     name: "Dashboard",
     href: "#",
-    icon: () => (
-      <svg
-        width="30"
-        height="30"
-        viewBox="0 0 30 30"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          x="5"
-          y="5"
-          width="7.5"
-          height="8.75"
-          rx="1"
-          stroke="#979797"
-          stroke-width="2"
-          stroke-linejoin="round"
-        />
-        <rect
-          x="5"
-          y="18.75"
-          width="7.5"
-          height="6.25"
-          rx="1"
-          stroke="#979797"
-          stroke-width="2"
-          stroke-linejoin="round"
-        />
-        <rect
-          x="17.5"
-          y="5"
-          width="7.5"
-          height="6.25"
-          rx="1"
-          stroke="#979797"
-          stroke-width="2"
-          stroke-linejoin="round"
-        />
-        <rect
-          x="17.5"
-          y="16.25"
-          width="7.5"
-          height="8.75"
-          rx="1"
-          stroke="#979797"
-          stroke-width="2"
-          stroke-linejoin="round"
-        />
-      </svg>
-    ),
+    icon: <DashIcon />,
     current: true,
   },
   {
     name: "Users",
     href: "#",
-    icon: () => (
-      <svg
-        width="30"
-        height="30"
-        viewBox="0 0 30 30"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle cx="15" cy="11.25" r="5" fill="#979797" />
-        <circle cx="21.25" cy="11.25" r="3.75" fill="#979797" />
-        <circle cx="8.75" cy="11.25" r="3.75" fill="#979797" />
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M21.9607 22.5H25.1451C25.7368 22.5 26.1906 21.9914 26.06 21.4144C25.6549 19.6245 24.4649 16.25 21.2501 16.25C20.1425 16.25 19.2753 16.6506 18.5977 17.2489C20.4823 18.4717 21.4568 20.6128 21.9607 22.5Z"
-          fill="#979797"
-        />
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M11.4023 17.2489C10.7247 16.6506 9.85749 16.25 8.74988 16.25C5.53516 16.25 4.34513 19.6245 3.94004 21.4144C3.80944 21.9914 4.26323 22.5 4.85485 22.5H8.03932C8.54318 20.6128 9.51766 18.4717 11.4023 17.2489Z"
-          fill="#979797"
-        />
-        <path
-          d="M15 17.5C19.8232 17.5 20.9243 21.9665 21.1756 24.0058C21.2432 24.554 20.8023 25 20.25 25H9.75C9.19772 25 8.7568 24.554 8.82436 24.0058C9.07574 21.9665 10.1768 17.5 15 17.5Z"
-          fill="#979797"
-        />
-      </svg>
-    ),
+    icon: <UsersIcon />,
+
     current: false,
     children: [
       { name: "User 1", href: "#" },
@@ -124,17 +52,22 @@ const navigation = [
   {
     name: "Equipments",
     href: "#",
-    icon: EquipIcon,
+    icon: <EquipIcon />,
     current: false,
     children: [
-      { name: "Equipment 1", href: "#" },
-      { name: "Equipment 2", href: "#" },
+      { name: "Add Equipment", href: "#" },
+      { name: "Equipment", href: "/" },
+      { name: "Live Equipment", href: "/live-equipment" },
+      {
+        name: "Multi Equipment",
+        href: "/",
+      },
     ],
   },
   {
     name: "Task Centers",
     href: "#",
-    icon: TaskIcon,
+    icon: <ClipboardDocumentCheckIcon className="w-6 h-6 text-gray-600" />,
     current: false,
     children: [
       { name: "Task Center 1", href: "#" },
@@ -144,12 +77,12 @@ const navigation = [
   {
     name: "Maintains",
     href: "#",
-    icon: MainIcon,
+    icon: <MaintainsIcon />,
     current: false,
     children: [
       { name: "Lunch Complaints", href: "#" },
       { name: "List of complaints", href: "#" },
-      { name: "Maintenance Settings", href: "#" },
+      { name: "Maintenance Settings", href: "/maintenance" },
       { name: "Resolved Complaints", href: "#" },
       { name: "Pending Complaints", href: "#" },
       { name: "Complete Services", href: "#" },
@@ -160,7 +93,7 @@ const navigation = [
   {
     name: "Health and Safety",
     href: "#",
-    icon: ChartPieIcon,
+    icon: <HealthIcon />,
     current: false,
     children: [
       { name: "Health and Safety 1", href: "#" },
@@ -170,7 +103,7 @@ const navigation = [
   {
     name: "Team Resources",
     href: "#",
-    icon: TeamIcon,
+    icon: <TeamsIcon />,
     current: false,
     children: [
       { name: "Team 1", href: "#" },
@@ -180,7 +113,7 @@ const navigation = [
   {
     name: "Inventory",
     href: "#",
-    icon: InventoryIcon,
+    icon: <InventoryIcon />,
     current: false,
     children: [
       { name: "Inventory 1", href: "#" },
@@ -293,10 +226,7 @@ export default function SidebarLayout({ children }) {
                                       "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold text-gray-700"
                                     )}
                                   >
-                                    <item.icon
-                                      className="w-6 h-6 text-gray-400 shrink-0"
-                                      aria-hidden="true"
-                                    />
+                                    {item.icon}
                                     {item.name}
                                   </a>
                                 ) : (
@@ -311,10 +241,7 @@ export default function SidebarLayout({ children }) {
                                             "flex items-center w-full text-left rounded-md p-2 gap-x-3 text-sm leading-6 font-semibold text-gray-700"
                                           )}
                                         >
-                                          <item.icon
-                                            className="w-6 h-6 text-gray-400 shrink-0"
-                                            aria-hidden="true"
-                                          />
+                                          {item.icon}
                                           {item.name}
                                           <ChevronRightIcon
                                             className={classNames(
@@ -340,7 +267,7 @@ export default function SidebarLayout({ children }) {
                                                   subItem.current
                                                     ? "bg-gray-50"
                                                     : "hover:bg-gray-50",
-                                                  "block rounded-md py-2 pr-2 pl-9 text-sm leading-6 text-gray-700"
+                                                  "block rounded-md py-2 pr-2 pl-2 text-sm leading-6 text-gray-700"
                                                 )}
                                               >
                                                 {subItem.name}
@@ -439,10 +366,7 @@ export default function SidebarLayout({ children }) {
                               "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold text-gray-700"
                             )}
                           >
-                            <item.icon
-                              className="w-6 h-6 text-gray-400 shrink-0"
-                              aria-hidden="true"
-                            />
+                            {item.icon}
                             {item.name}
                           </a>
                         ) : (
@@ -457,10 +381,7 @@ export default function SidebarLayout({ children }) {
                                     "flex items-center w-full text-left rounded-md p-2 gap-x-3 text-sm leading-6 font-semibold text-gray-700"
                                   )}
                                 >
-                                  <item.icon
-                                    className="w-6 h-6 text-gray-400 shrink-0"
-                                    aria-hidden="true"
-                                  />
+                                  {item.icon}
                                   {item.name}
                                   <ChevronRightIcon
                                     className={classNames(
@@ -483,9 +404,24 @@ export default function SidebarLayout({ children }) {
                                           subItem.current
                                             ? "bg-gray-50"
                                             : "hover:bg-gray-50",
-                                          "block rounded-md py-2 pr-2 pl-9 text-sm leading-6 text-gray-700"
+                                          "flex items-center gap-4 rounded-md py-2 pr-2 pl-2 text-sm leading-6 text-gray-700"
                                         )}
                                       >
+                                        <span className="inline">
+                                          <svg
+                                            width="15"
+                                            height="15"
+                                            viewBox="0 0 15 15"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                          >
+                                            <path
+                                              d="M9.875 7.5C9.875 8.81168 8.81168 9.875 7.5 9.875C6.18832 9.875 5.125 8.81168 5.125 7.5C5.125 6.18832 6.18832 5.125 7.5 5.125C8.81168 5.125 9.875 6.18832 9.875 7.5Z"
+                                              fill="currentColor"
+                                            ></path>
+                                          </svg>
+                                        </span>
+
                                         {subItem.name}
                                       </Disclosure.Button>
                                     </li>
