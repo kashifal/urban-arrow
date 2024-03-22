@@ -6,6 +6,7 @@ import SortIcon from "../icons/SortIcon";
 import Card from "../components/Card";
 import AddEquipment from "./AddEquipment";
 import { Transition } from "@headlessui/react";
+import NoSignalCard from "../components/NoSignalCard";
 const Equipment = () => {
   const [open, setOpen] = useState(false);
   const close = () => {
@@ -46,6 +47,10 @@ const Equipment = () => {
           <Card />
           <Card />
           <Card />
+          <NoSignalCard />
+          <NoSignalCard />
+          <NoSignalCard />
+          <NoSignalCard />
         </div>
       </div>
       <Transition
