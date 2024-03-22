@@ -3,30 +3,32 @@ import React from "react";
 function EquipIcon() {
   return (
     <svg
+      className="text-gray-600"
       xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="30"
-      height="30"
+      viewBox="0 0 24 24"
+      width="24"
+      height="24"
+      color="currentColor"
       fill="none"
-      viewBox="0 0 30 30"
     >
-      <path fill="url(#pattern0)" d="M0 0H30V30H0z"></path>
-      <defs>
-        <pattern
-          id="pattern0"
-          width="1"
-          height="1"
-          patternContentUnits="objectBoundingBox"
-        >
-          <use transform="scale(.01111)" xlinkHref="#image0_85_3422"></use>
-        </pattern>
-        <image
-          id="image0_85_3422"
-          width="90"
-          height="90"
-          xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEGklEQVR4nO2cT6gVVRzHf4XkIhNKIsQSadOi7NXGCougjbpyaa56qwhMw3BhWd1AaNEmpzfz/Z5594HyXAhPiBbWxtwEUctapKig5F+EZ6UGWSZXTh7wLbz3ztyZOfeceb8P/DaPd++c+czv/s6ZM3OOiKIoiqIoiqIoitI8eZ6vJLmV5BckjwI4QfJ3GwD+IXkRwE8AvgLwUZ7nryZJstRD0+JnZmbmEWPMdpI/kLxNslcmAOwe9zkEDYBHSX4O4M+ychdI7oz7PIKl1+s9YIx5h+T8qIJV8hCSJHmc5JEqglXyEEhO2M5MJTdIlmWvV6nFmskFAPAcyT9UcoOQXEXynEpukE6n86AbG2u5aBKS76pkD8M4ANe142sYkp+o5IaZm5t7iORlHcI1DIA3VLIHSO6tUDbW+GhjKyB5rILoSc9t/cCWOokRAKcqlI79vtpJ8lN33PUSIySvVRB91rNke8wPJUZI3qh4o7LGl2Qn+rDECKtPhU76kuziR4kRkr9UvFnZ71GyjXMSIyQPVhR91qNkGzckRkjurFg6aq3TQyTbC3tVYiTP87U1iJ70IdmJviSxQvL4uOt0EcnuWCckVkgeGmedLirZHetriRGSu2ooHf//pEnOAXgbwNNNSHbH+UxiA8DuOiT3y3KSBwC81a+zLCvZhjFmi8QEGpRcRPwokgH8a19Nk8VWLug5AHwnsQDPmVxn2HcAJQYYaSa7mJ+dnX1YQodxS7Zl42MJHURcLlxc6Xa7j0nIMPJMdtn8poQM2yH5GwkZtkPymW63+4SECtsh+SqAZyRUWtDx9ewDYwCvSai0IZN5d23iixIqLcnk7+3L8BIqLcjkayTfsy/DS6gElMmHAPxa5jMALtj2T01NrZCQCUUyFiw7TtP0WQA73JTozwB+c+vD592FOGqnSG1n1+l0lkjoBFQu9khbUckeUMkeUMkeUMkeUMkeMMa8H8DIotfqnWOMMRsB/DduyWzzEC7LsqeqLHugZnIxSHYH/Iz/BrCP5Dr7ZNhGnucvkUxI3lTJBcnzfDXJW30kn8+y7PkBF2jC/o/W5Ao7DdhMHiR5oWxWyOxWd3wLIfltHwH7in4HgC9V8nDRp/tIWldC9MuaycMl/XU/SWmaLisqOk3TZTqEG3GRZRnRSZIs13FyQKUDi6XjK9MZ2nFy0e8AMKWSR99Iyg7ZJoZ9Pk3TF9y2wprJBW6/+96wDJLtJF9QyQUBMD1A1k07TrZ12HaQNowxr9hyoZlckunp6SfrnlTCYu74BgFgQ43TpHvGfT5B47Z5L73FO+/FbfvwYNznEQUANo2yAy7u7s64edztj3En3GRYZ+fiFslZ3S6t4lw1gG12yQGAk3ZexMVJ97dtdnhY3yVWFEVRFEVRFEVRpE7uAPRhFlm6xFHyAAAAAElFTkSuQmCC"
-        ></image>
-      </defs>
+      <path
+        d="M20.3584 13.3567C19.1689 14.546 16.9308 14.4998 13.4992 14.4998C11.2914 14.4998 9.50138 12.7071 9.50024 10.4993C9.50024 7.07001 9.454 4.83065 10.6435 3.64138C11.8329 2.45212 12.3583 2.50027 17.6274 2.50027C18.1366 2.49809 18.3929 3.11389 18.0329 3.47394L15.3199 6.18714C14.6313 6.87582 14.6294 7.99233 15.3181 8.68092C16.0068 9.36952 17.1234 9.36959 17.8122 8.68109L20.5259 5.96855C20.886 5.60859 21.5019 5.86483 21.4997 6.37395C21.4997 11.6422 21.5479 12.1675 20.3584 13.3567Z"
+        stroke="currentColor"
+        stroke-width="1.5"
+      />
+      <path
+        d="M13.5 14.5L7.32842 20.6716C6.22386 21.7761 4.433 21.7761 3.32843 20.6716C2.22386 19.567 2.22386 17.7761 3.32843 16.6716L9.5 10.5"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+      />
+      <path
+        d="M5.50896 18.5H5.5"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
     </svg>
   );
 }
