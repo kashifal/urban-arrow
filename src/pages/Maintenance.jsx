@@ -5,14 +5,14 @@ const Maintenance = () => {
   return (
     <SidebarLayout>
       <div className="  s rounded-[10px] relative">
-        <div className="mx-4 pl-2  py-6">
+        <div className="py-6 pl-2 mx-4">
           <div className="">
             <h3 className=" font-medium text-[20px] leading-[23px] ">
               MAINTENANCE SETTINGS
             </h3>
           </div>
-          <div className="py-12 sm:inline-flex   w-full justify-between gap-20">
-            <div className="isolate inline-flex rounded-md ">
+          <div className="justify-between w-full gap-20 py-12 sm:inline-flex">
+            <div className="inline-flex rounded-md isolate ">
               <a href="#" className="">
                 <button
                   type="button"
@@ -54,13 +54,13 @@ const Maintenance = () => {
               </div>
             </div>
           </div>
-          <div className="py-3 w-full  ">
+          <div className="w-full py-3 ">
             <div className="flex-auto">
               <h1 className="text-[20px] font-medium leading-[23px] text-gray-900">
                 MAINTENANCE CHECKLIST
               </h1>
             </div>
-            <div className="mt-8 sm:flex justify-between sm:mt-8">
+            <div className="justify-between mt-8 sm:flex sm:mt-8">
               <div className="flex items-center gap-4">
                 <button
                   type="button"
@@ -68,8 +68,8 @@ const Maintenance = () => {
                 >
                   Add Checklist
                 </button>
-                <div className=" sm:left-3 flex mt-4 sm:mt-0 rounded-md sm:relative absolute">
-                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-6">
+                <div className="absolute flex mt-4 rounded-md sm:left-3 sm:mt-0 sm:relative">
+                  <div className="absolute inset-y-0 left-0 flex items-center pl-6 pointer-events-none">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-[20px] w-[20px] sm:mt-0"
@@ -113,7 +113,7 @@ const Maintenance = () => {
             </div>
           </div>
           <div className="py-6">
-            <div className="mt-8 flow-root">
+            <div className="flow-root mt-8">
               <div className="-mx-4 -my-2 overflow-x-hidden sm:-mx-6 lg:-mx-8">
                 <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-10">
                   <div className="overflow-hidden  rounded-[5px]">
@@ -140,7 +140,150 @@ const Maintenance = () => {
                           </th>
                         </tr>
                       </thead>
-                      <tbody className="divide-y divide-gray-200 bg-white">
+                      <tbody className="bg-white divide-y divide-gray-200">
+                        <tr>
+                          <td className="whitespace-nowrap py-4 pl-4 pr-3 text-[12px] leading-[14px] font-medium text-[#1C7900] text-center sm:pl-6">
+                            22
+                          </td>
+                          <td className="whitespace-nowrap font-medium text-center sm:pl-[230px] pl-[90px] px-3 py-4 text-[12px] leading-[14px] text-black">
+                            Rameez
+                          </td>
+                          <td className="whitespace-nowrap px-20 py-4 font-medium text-center lg:pl-[250px] sm:pl-[180px] pl-[90px] text-[12px] leading-[14px] text-black">
+                            ....
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="whitespace-nowrap py-4 pl-4 pr-3 text-[12px] leading-[14px] font-medium text-[#1C7900] text-center sm:pl-6">
+                            22
+                          </td>
+                          <td className="whitespace-nowrap font-medium text-center sm:pl-[230px] pl-[90px] px-3 py-4 text-[12px] leading-[14px] text-black">
+                            Rameez
+                          </td>
+                          <td className="whitespace-nowrap px-20 py-4 font-medium text-center lg:pl-[250px] sm:pl-[180px] pl-[90px] text-[12px] leading-[14px] text-black">
+                            ....
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="whitespace-nowrap py-4 pl-4 pr-3 text-[12px] leading-[14px] font-medium text-[#1C7900] text-center sm:pl-6">
+                            22
+                          </td>
+                          <td className="whitespace-nowrap font-medium text-center sm:pl-[230px] pl-[90px] px-3 py-4 text-[12px] leading-[14px] text-black">
+                            Rameez
+                          </td>
+                          <td className="whitespace-nowrap px-20 py-4 font-medium text-center lg:pl-[250px] sm:pl-[180px] pl-[90px] text-[12px] leading-[14px] text-black">
+                            ....
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="whitespace-nowrap py-4 pl-4 pr-3 text-[12px] leading-[14px] font-medium text-[#1C7900] text-center sm:pl-6">
+                            22
+                          </td>
+                          <td className="whitespace-nowrap font-medium text-center sm:pl-[230px] pl-[90px] px-3 py-4 text-[12px] leading-[14px] text-black">
+                            Rameez
+                          </td>
+                          <td className="whitespace-nowrap px-20 py-4 font-medium text-center lg:pl-[250px] sm:pl-[180px] pl-[90px] text-[12px] leading-[14px] text-black">
+                            ....
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="whitespace-nowrap py-4 pl-4 pr-3 text-[12px] leading-[14px] font-medium text-[#1C7900] text-center sm:pl-6">
+                            22
+                          </td>
+                          <td className="whitespace-nowrap font-medium text-center sm:pl-[230px] pl-[90px] px-3 py-4 text-[12px] leading-[14px] text-black">
+                            Rameez
+                          </td>
+                          <td className="whitespace-nowrap px-20 py-4 font-medium text-center lg:pl-[250px] sm:pl-[180px] pl-[90px] text-[12px] leading-[14px] text-black">
+                            ....
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="whitespace-nowrap py-4 pl-4 pr-3 text-[12px] leading-[14px] font-medium text-[#1C7900] text-center sm:pl-6">
+                            22
+                          </td>
+                          <td className="whitespace-nowrap font-medium text-center sm:pl-[230px] pl-[90px] px-3 py-4 text-[12px] leading-[14px] text-black">
+                            Rameez
+                          </td>
+                          <td className="whitespace-nowrap px-20 py-4 font-medium text-center lg:pl-[250px] sm:pl-[180px] pl-[90px] text-[12px] leading-[14px] text-black">
+                            ....
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="whitespace-nowrap py-4 pl-4 pr-3 text-[12px] leading-[14px] font-medium text-[#1C7900] text-center sm:pl-6">
+                            22
+                          </td>
+                          <td className="whitespace-nowrap font-medium text-center sm:pl-[230px] pl-[90px] px-3 py-4 text-[12px] leading-[14px] text-black">
+                            Rameez
+                          </td>
+                          <td className="whitespace-nowrap px-20 py-4 font-medium text-center lg:pl-[250px] sm:pl-[180px] pl-[90px] text-[12px] leading-[14px] text-black">
+                            ....
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="whitespace-nowrap py-4 pl-4 pr-3 text-[12px] leading-[14px] font-medium text-[#1C7900] text-center sm:pl-6">
+                            22
+                          </td>
+                          <td className="whitespace-nowrap font-medium text-center sm:pl-[230px] pl-[90px] px-3 py-4 text-[12px] leading-[14px] text-black">
+                            Rameez
+                          </td>
+                          <td className="whitespace-nowrap px-20 py-4 font-medium text-center lg:pl-[250px] sm:pl-[180px] pl-[90px] text-[12px] leading-[14px] text-black">
+                            ....
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="whitespace-nowrap py-4 pl-4 pr-3 text-[12px] leading-[14px] font-medium text-[#1C7900] text-center sm:pl-6">
+                            22
+                          </td>
+                          <td className="whitespace-nowrap font-medium text-center sm:pl-[230px] pl-[90px] px-3 py-4 text-[12px] leading-[14px] text-black">
+                            Rameez
+                          </td>
+                          <td className="whitespace-nowrap px-20 py-4 font-medium text-center lg:pl-[250px] sm:pl-[180px] pl-[90px] text-[12px] leading-[14px] text-black">
+                            ....
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="whitespace-nowrap py-4 pl-4 pr-3 text-[12px] leading-[14px] font-medium text-[#1C7900] text-center sm:pl-6">
+                            22
+                          </td>
+                          <td className="whitespace-nowrap font-medium text-center sm:pl-[230px] pl-[90px] px-3 py-4 text-[12px] leading-[14px] text-black">
+                            Rameez
+                          </td>
+                          <td className="whitespace-nowrap px-20 py-4 font-medium text-center lg:pl-[250px] sm:pl-[180px] pl-[90px] text-[12px] leading-[14px] text-black">
+                            ....
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="whitespace-nowrap py-4 pl-4 pr-3 text-[12px] leading-[14px] font-medium text-[#1C7900] text-center sm:pl-6">
+                            22
+                          </td>
+                          <td className="whitespace-nowrap font-medium text-center sm:pl-[230px] pl-[90px] px-3 py-4 text-[12px] leading-[14px] text-black">
+                            Rameez
+                          </td>
+                          <td className="whitespace-nowrap px-20 py-4 font-medium text-center lg:pl-[250px] sm:pl-[180px] pl-[90px] text-[12px] leading-[14px] text-black">
+                            ....
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="whitespace-nowrap py-4 pl-4 pr-3 text-[12px] leading-[14px] font-medium text-[#1C7900] text-center sm:pl-6">
+                            22
+                          </td>
+                          <td className="whitespace-nowrap font-medium text-center sm:pl-[230px] pl-[90px] px-3 py-4 text-[12px] leading-[14px] text-black">
+                            Rameez
+                          </td>
+                          <td className="whitespace-nowrap px-20 py-4 font-medium text-center lg:pl-[250px] sm:pl-[180px] pl-[90px] text-[12px] leading-[14px] text-black">
+                            ....
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="whitespace-nowrap py-4 pl-4 pr-3 text-[12px] leading-[14px] font-medium text-[#1C7900] text-center sm:pl-6">
+                            22
+                          </td>
+                          <td className="whitespace-nowrap font-medium text-center sm:pl-[230px] pl-[90px] px-3 py-4 text-[12px] leading-[14px] text-black">
+                            Rameez
+                          </td>
+                          <td className="whitespace-nowrap px-20 py-4 font-medium text-center lg:pl-[250px] sm:pl-[180px] pl-[90px] text-[12px] leading-[14px] text-black">
+                            ....
+                          </td>
+                        </tr>
                         <tr>
                           <td className="whitespace-nowrap py-4 pl-4 pr-3 text-[12px] leading-[14px] font-medium text-[#1C7900] text-center sm:pl-6">
                             22
@@ -160,7 +303,7 @@ const Maintenance = () => {
               </div>
             </div>
           </div>
-          <div className="py-20   items-center justify-between sm:flex lg:gap-40 sm:gap-10">
+          <div className="items-center justify-between py-20 sm:flex lg:gap-40 sm:gap-10">
             <a
               href=""
               className="fonr-[400] text-[14px] sm:text-left text-center leading-[16px] text-[#174172] sm:ml-0 ml-16 "
@@ -210,7 +353,7 @@ const Maintenance = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
                   height="1em"
-                  className=" ml-3"
+                  className="ml-3 "
                   viewBox="0 0 24 24"
                 >
                   <path

@@ -18,7 +18,7 @@ const LiveEquipment = () => {
   return (
     <SidebarLayout>
       <div className=" px-8 py-6 bg-white rounded-[20px]">
-        <div className="flex sm:items-center gap-4 flex-wrap justify-between">
+        <div className="flex flex-wrap justify-between gap-4 sm:items-center">
           <Heading title="Welcome to Dashboard , 21 - February - 2024" />
           <div className="flex items-center gap-2">
             <button className="bg-white sm:ml-0 ml-auto text-base border border-[#174172] font-medium flex gap-2 items-center text-[#174172] px-6 py-2 rounded-[3px]">
@@ -31,7 +31,7 @@ const LiveEquipment = () => {
           </div>
         </div>
 
-        <div className="w-full   gap-6 grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 2xl:grid-cols-3 h-full   mt-4">
+        <div className="grid w-full h-full grid-cols-1 gap-6 mt-4 xl:grid-cols-3 lg:grid-cols-2 2xl:grid-cols-3">
           <CustomeCard>
             <h1 className="font-semibold text-base text-[#164473]">Speed</h1>
             <div className="">
@@ -45,7 +45,7 @@ const LiveEquipment = () => {
                 colors={["#32CD32", "#FFFF00", "#FF0000"]}
                 needleColor="#164473"
               />
-              <p className="text-sm text-center text-black font-semibold">
+              <p className="text-sm font-semibold text-center text-black">
                 {percentage * 100} Km/h
               </p>
             </div>
@@ -58,7 +58,7 @@ const LiveEquipment = () => {
               alt=""
             />
 
-            <h1 className="font-semibold text-base text-black">Mike Johns</h1>
+            <h1 className="text-base font-semibold text-black">Mike Johns</h1>
           </CustomeCard>
           <CustomeCard>
             <h1 className="font-semibold text-base text-[#164473]">
@@ -68,7 +68,7 @@ const LiveEquipment = () => {
               <img src={Passenger} alt="" />
             </div>
 
-            <h1 className="font-semibold text-base text-black">
+            <h1 className="text-base font-semibold text-black">
               Seatbelt Fasten
             </h1>
           </CustomeCard>{" "}
@@ -76,11 +76,11 @@ const LiveEquipment = () => {
           <CustomeCard>
             <h1 className="font-semibold text-base text-[#164473]">Battery</h1>
             <div className="flex items-center gap-4">
-              <div className=" flex items-center gap-3 flex-col">
+              <div className="flex flex-col items-center gap-3 ">
                 <div className="battery relative flex items-center justify-end flex-col h-40 w-16 bg-white border-4 p-[1px] border-[#3BC642] rounded-xl">
                   <div className="w-full h-[80%] bg-[#3A7FE1] rounded-b-lg"></div>
                   <div className="absolute w-5 h-3 rounded-t-md bg-[#3BC642] -top-4 border border-white"></div>
-                  <div className="absolute bottom-14 text-base font-bold text-white">
+                  <div className="absolute text-base font-bold text-white bottom-14">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="white"
@@ -96,25 +96,25 @@ const LiveEquipment = () => {
                       />
                     </svg>
                   </div>
-                  <div className="absolute bottom-3 text-base font-bold text-white">
+                  <div className="absolute text-base font-bold text-white bottom-3">
                     80%
                   </div>
                 </div>
                 <h1 className="text-sm font-medium">Battery Voltage</h1>
               </div>
-              <div className="flex items-center flex-col">
+              <div className="flex flex-col items-center">
                 {" "}
                 <div className="flex">
-                  <div className="flex items-center gap-2 flex-col">
+                  <div className="flex flex-col items-center gap-2">
                     <h1 className="text-sm font-medium">Battery Voltage</h1>
                     <Progress pro="35" color="#3BC642" />
                   </div>
-                  <div className="flex items-center gap-2 flex-col">
+                  <div className="flex flex-col items-center gap-2">
                     <h1 className="text-sm font-medium">Battery Voltage</h1>
                     <Progress pro="20" color="#FF0000" />
                   </div>
                 </div>
-                <div className="flex items-center gap-2 flex-col">
+                <div className="flex flex-col items-center gap-2">
                   <Progress pro="25" color="#E2B124" />
                   <h1 className="text-sm font-medium">Battery Voltage</h1>
                 </div>
@@ -314,6 +314,443 @@ const LiveEquipment = () => {
             </div>
             <h1></h1>
           </CustomeCard>{" "}
+        </div>
+        <div class="py-4">
+          <div class="">
+            <div class="mx-4 py-3 overflow-hidden">
+              <h3 class="text-[#164473] font-semibold text-[16px] leading-[18px] text-center ">
+                Sessions Summaries
+              </h3>
+
+              <div class="mt-8 flow-root">
+                <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                  <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+                    <div class="overflow-hidden">
+                      <table class="min-w-full divide-y divide-[#0000001a] ">
+                        <thead class="bg-[#F4F9FF] rounded-[5px]">
+                          <tr>
+                            <th
+                              scope="col"
+                              class="py-3.5 pl-4  text-[12px] leading-[14px] font-medium text-[#33363F] whitespace-nowrap sm:pl-6"
+                            >
+                              Session Number
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-3 py-3.5  text-[12px] leading-[14px] font-medium text-[#33363F] "
+                            >
+                              Date
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-3 py-3.5  text-[12px] leading-[14px] font-medium text-[#33363F] whitespace-nowrap"
+                            >
+                              Operator Name
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-3 py-3.5  text-[12px] leading-[14px] font-medium text-[#33363F] whitespace-nowrap"
+                            >
+                              Operator ID
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-3 py-3.5  text-[12px] leading-[14px] font-medium text-[#33363F] whitespace-nowrap"
+                            >
+                              Session Duration
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-3 py-3.5  text-[12px] leading-[14px] font-medium text-[#33363F] whitespace-nowrap"
+                            >
+                              Session Idle Time
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-3 py-3.5  text-[12px] leading-[14px] font-medium text-[#33363F] whitespace-nowrap"
+                            >
+                              Session Movement Time
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-3 py-3.5  text-[12px] leading-[14px] font-medium text-[#33363F]"
+                            >
+                              Overspeed
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-3 py-3.5  text-[12px] leading-[14px] font-medium text-[#33363F]"
+                            >
+                              Seatbelt
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-3 py-3.5  text-[12px] leading-[14px] font-medium text-[#33363F]"
+                            >
+                              Impact
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-3 py-3.5  text-[12px] leading-[14px] whitespace-nowrap font-medium text-[#33363F]"
+                            >
+                              Sharp Turn
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 bg-white">
+                          <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-[10px] leading-[11px] text-center font-medium text-[#1C7900] sm:pl-6">
+                              ASST-000001
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              02-04-2024
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              Rasheem Azam
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              0212
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              1 Hr
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              1 Hr
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              1 Hr
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              4
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              0
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              1
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              3
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-[10px] leading-[11px] text-center font-medium text-[#1C7900] sm:pl-6">
+                              ASST-000001
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              02-04-2024
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              Rasheem Azam
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              0212
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              1 Hr
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              1 Hr
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              1 Hr
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              4
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              0
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              1
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              3
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-[10px] leading-[11px] text-center font-medium text-[#1C7900] sm:pl-6">
+                              ASST-000001
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              02-04-2024
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              Rasheem Azam
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              0212
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              1 Hr
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              1 Hr
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              1 Hr
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              4
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              0
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              1
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              3
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-[10px] leading-[11px] text-center font-medium text-[#1C7900] sm:pl-6">
+                              ASST-000001
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              02-04-2024
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              Rasheem Azam
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              0212
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              1 Hr
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              1 Hr
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              1 Hr
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              4
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              0
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              1
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                              3
+                            </td>
+                          </tr>
+
+                          <tr></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 pt-2">
+              <div class="mx-4 py-3 overflow-hidden max-w-2xl">
+                <h3 class="text-[#164473] font-semibold text-[16px] leading-[18px] text-center ">
+                  Breakdown History
+                </h3>
+
+                <div class="mt-8 flow-root">
+                  <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                    <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+                      <div class="overflow-hidden">
+                        <table class="min-w-full divide-y divide-[#0000001a] ">
+                          <thead class="bg-[#F4F9FF] rounded-[5px]">
+                            <tr>
+                              <th
+                                scope="col"
+                                class="py-3.5 pl-4  text-[12px] leading-[14px] font-medium text-[#33363F] whitespace-nowrap sm:pl-6"
+                              >
+                                Complaint Date
+                              </th>
+                              <th
+                                scope="col"
+                                class="px-3 py-3.5  text-[12px] leading-[14px] font-medium text-[#33363F] whitespace-nowrap"
+                              >
+                                Job Completion Date
+                              </th>
+                              <th
+                                scope="col"
+                                class="px-3 py-3.5  text-[12px] leading-[14px] font-medium text-[#33363F] whitespace-nowrap"
+                              >
+                                Breakdown Time
+                              </th>
+                              <th
+                                scope="col"
+                                class="px-3 py-3.5  text-[12px] leading-[14px] font-medium text-[#33363F] whitespace-nowrap"
+                              >
+                                Cost Of Repair
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody class="divide-y divide-gray-200 bg-white">
+                            <tr>
+                              <td class="whitespace-nowrap py-4 pl-4 pr-3 text-[10px] leading-[11px] text-center font-medium sm:pl-6">
+                                02-04-2024
+                              </td>
+                              <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                                02-04-2024
+                              </td>
+                              <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                                1 Hr
+                              </td>
+                              <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                                5$
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td class="whitespace-nowrap py-4 pl-4 pr-3 text-[10px] leading-[11px] text-center font-medium sm:pl-6">
+                                02-04-2024
+                              </td>
+                              <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                                02-04-2024
+                              </td>
+                              <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                                1 Hr
+                              </td>
+                              <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                                5$
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td class="whitespace-nowrap py-4 pl-4 pr-3 text-[10px] leading-[11px] text-center font-medium sm:pl-6">
+                                02-04-2024
+                              </td>
+                              <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                                02-04-2024
+                              </td>
+                              <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                                1 Hr
+                              </td>
+                              <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                                5$
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td class="whitespace-nowrap py-4 pl-4 pr-3 text-[10px] leading-[11px] text-center font-medium sm:pl-6">
+                                02-04-2024
+                              </td>
+                              <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                                02-04-2024
+                              </td>
+                              <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                                1 Hr
+                              </td>
+                              <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                                5$
+                              </td>
+                            </tr>
+
+                            <tr class=""></tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mx-4 py-3 overflow-hidden max-w-2xl">
+                <h3 class="text-[#164473] font-semibold text-[16px] leading-[18px] text-center ">
+                  Service History
+                </h3>
+
+                <div class="mt-8 flow-root">
+                  <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                    <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+                      <div class="overflow-hidden">
+                        <table class="min-w-full divide-y divide-[#0000001a] ">
+                          <thead class="bg-[#F4F9FF] rounded-[5px]">
+                            <tr>
+                              <th
+                                scope="col"
+                                class="py-3.5 pl-4  text-[12px] leading-[14px] font-medium text-[#33363F] sm:pl-6"
+                              >
+                                Service Date
+                              </th>
+                              <th
+                                scope="col"
+                                class="px-3 py-3.5  text-[12px] leading-[14px] font-medium text-[#33363F]"
+                              >
+                                Meter Hours
+                              </th>
+                              <th
+                                scope="col"
+                                class="px-3 py-3.5  text-[12px] leading-[14px] font-medium text-[#33363F]"
+                              >
+                                Cost Of Service
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody class="divide-y divide-gray-200 bg-white">
+                            <tr>
+                              <td class="whitespace-nowrap py-4 pl-4 pr-3 text-[10px] leading-[11px] text-center font-medium sm:pl-6">
+                                02-04-2024
+                              </td>
+                              <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                                02-04-2024
+                              </td>
+                              <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                                5$
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td class="whitespace-nowrap py-4 pl-4 pr-3 text-[10px] leading-[11px] text-center font-medium sm:pl-6">
+                                02-04-2024
+                              </td>
+                              <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                                02-04-2024
+                              </td>
+                              <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                                5$
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td class="whitespace-nowrap py-4 pl-4 pr-3 text-[10px] leading-[11px] text-center font-medium sm:pl-6">
+                                02-04-2024
+                              </td>
+                              <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                                02-04-2024
+                              </td>
+                              <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                                5$
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td class="whitespace-nowrap py-4 pl-4 pr-3 text-[10px] leading-[11px] text-center font-medium sm:pl-6">
+                                02-04-2024
+                              </td>
+                              <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                                02-04-2024
+                              </td>
+                              <td class="whitespace-nowrap px-3 py-4 text-[10px] leading-[11px] text-center font-medium">
+                                5$
+                              </td>
+                            </tr>
+
+                            <tr class=""></tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </SidebarLayout>
