@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SidebarLayout from "./layouts/SidebarLayout";
 import { Input } from "./components/input";
 import MyTable from "./components/MyTable";
@@ -8,14 +8,18 @@ import LiveEquipment from "./pages/LiveEquipment";
 //
 import { Routes, Route } from "react-router-dom";
 import Maintenance from "./pages/Maintenance";
+import AddEquipment from "./pages/AddEquipment";
+import { Dialog } from "@headlessui/react";
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Equipment />} />
-      <Route path="/live-equipment" element={<LiveEquipment />} />
-      <Route path="/maintenance" element={<Maintenance />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Equipment />} />
+        <Route path="/live-equipment" element={<LiveEquipment />} />
+        <Route path="/maintenance" element={<Maintenance />} />
+      </Routes>
+    </>
   );
 };
 
