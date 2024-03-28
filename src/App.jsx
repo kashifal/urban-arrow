@@ -10,6 +10,7 @@ import { Routes, Route } from "react-router-dom";
 import Maintenance from "./pages/Maintenance";
 import AddEquipment from "./pages/AddEquipment";
 import { Dialog } from "@headlessui/react";
+import AddEquipment from "./pages/AddEquipment";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/" element={<Equipment />} />
         <Route path="/live-equipment" element={<LiveEquipment />} />
         <Route path="/maintenance" element={<Maintenance />} />
+        <Route path="/add" element={<AddEquipment />} />
       </Routes>
     </>
   );
