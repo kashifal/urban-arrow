@@ -7,7 +7,7 @@ const PaymentMethodCards = () => {
     <div className="bg-[#121417] group border border-white/10 rounded-lg px-4 py-2.5 flex items-center justify-between cursor-pointer">
       <div className="flex items-center gap-2">
       <span className=" rounded-lg overflow-hidden">
-       <img src="../src/assets/Pay1.svg" alt="" className="shrink-0" />
+       <img src="../src/assets/Pay1.svg" alt="" className="shrink-0 filter" />
       </span>
       <p className="font-light text-sm">Play from your Exchange</p>
       </div>
@@ -31,8 +31,8 @@ const PaymentMethodCards = () => {
     </div>
     <div className="bg-[#121417] group border border-white/10 rounded-lg px-4 py-2.5 flex items-center justify-between cursor-pointer">
       <div className="flex items-center gap-2">
-      <span className=" rounded-lg overflow-hidden">
-       <img src="../src/assets/Pay1.svg" alt="" className="shrink-0" />
+      <span className=" rounded-lg  overflow-hidden">
+       <img src="../src/assets/pay1.svg" alt="" className="shrink-0 filter" />
       </span>
       <p className="font-light text-sm">Pay With Wallet</p>
       </div>
@@ -57,7 +57,7 @@ const PaymentMethodCards = () => {
     <div className="bg-[#121417] group border border-white/10 rounded-lg px-4 py-2.5 flex items-center justify-between cursor-pointer">
       <div className="flex items-center gap-2">
       <span className=" rounded-lg overflow-hidden">
-       <img src="../src/assets/Pay1.svg" alt="" className="shrink-0" />
+       <img src="../src/assets/pay4.svg" alt="" className="shrink-0 "  />
       </span>
       <p className="font-light text-sm">Pay With QR Code</p>
       </div>
@@ -69,7 +69,7 @@ const PaymentMethodCards = () => {
     <div className="bg-[#121417] group border border-white/10 rounded-lg px-4 py-2.5 flex items-center justify-between cursor-pointer">
       <div className="flex items-center gap-2">
       <span className=" rounded-lg overflow-hidden">
-       <img src="../src/assets/Pay1.svg" alt="" className="shrink-0" />
+       <img src="../src/assets/pay4.svg" alt="" className="shrink-0 " />
       </span>
       <p className="font-light text-sm">Copy Patyment Details</p>
       </div>

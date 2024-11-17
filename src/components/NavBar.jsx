@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../css/FAQ.css'
 import { RxHamburgerMenu } from "react-icons/rx";
+import { Link } from 'react-router-dom';
 
 
 const NavBar = () => {
@@ -15,22 +16,22 @@ const NavBar = () => {
           <nav className="bg-[rgb(14,14,14)] px-2 h-[70px]">
             <div className=" max-w-[68rem] mx-auto flex items-center justify-between pt-[14px] relative">
               <div className="col-span-3 xs:col-span-2 sm:col-span-6 md:col-span-3">
-                <div className="flex items-center">
-                  <img src="../src/assets/asset 0.png" className="h-[36px] w-[40px] brightness-[-100]" alt="" />
+                <Link to='/shop' className="flex cursor-pointer items-center">
+                  <img src="../src/assets/asset 0.png" className="h-[36px] filter w-[40px] brightness-[-100]" alt="" />
                   <p className="text-white ml-[6px] font-medium sm:text-[1.5rem] tracking-wider xs:hidden sm:block">
                     DogWifTools
                   </p>
-                </div>
+                </Link>
               </div>
              
               {/* Navbar Links (visible on larger screens) */}
               <div className="hidden lg:block">
                 <div className="flex text-white gap-10 justify-around text-[0.9rem] pt-[8px]">
-                  <a href="#">Shop</a>
-                  <a href="#">Contact</a>
-                  <a href="#">Reviews</a>
-                  <a href="#">FAQ</a>
-                  <a href="#">Terms</a>
+                  <Link to="/shop">Shop</Link>
+                  <Link to="/contact">Contact</Link>
+                  <Link to="/reviews">Reviews</Link>
+                  <Link to="/faq">FAQ</Link>
+                  <Link to="/terms">Terms</Link>
                 </div>
               </div>
               {/* Language  */}
@@ -38,15 +39,15 @@ const NavBar = () => {
                 <div className="flex">
                   <div className="sm:flex hidden border border-[#646363] rounded-full px-[10px] py-[2px]  mt-[6px]">
                     <p className="text-[14px]">Solana</p>
-                    <img src="../src/assets/asset 9.svg" className="h-[18px] ml-[6px] mt-[2px]" alt="" />
+                    <img src="../src/assets/asset 9.svg" className="h-[18px]  ml-[6px] mt-[2px]" alt="" />
                   </div>
                   <div className="sm:flex hidden border border-[#646363] rounded-full px-[10px] py-[2px] ml-[20px] mt-[6px]">
                     <p className="text-[14px]">English</p>
-                    <img src="../src/assets/asset 9.svg" className="h-[18px] ml-[6px] mt-[2px]" alt="" />
+                    <img src="../src/assets/asset 9.svg" className="h-[18px]  ml-[6px] mt-[2px]" alt="" />
                   </div>
                   <div className="flex mt-[6px]">
-                    <img src="../src/assets/asset 3.svg" className="h-[24px] ml-[10px]" alt="" />
-                    <img src="../src/assets/asset 7.svg" className="h-[24px] ml-[20px]" alt="" />
+                    <img src="../src/assets/asset 3.svg" className="h-[24px]   ml-[10px]" alt="" />
+                    <img src="../src/assets/asset 7.svg" className="h-[24px]  ml-[20px]" alt="" />
                     <p className="ml-[10px]">0</p>
                   </div>
                 </div>
@@ -76,7 +77,7 @@ const NavBar = () => {
                   </div>
                   <div className="flex w-full border border-[#646363] justify-center rounded-full px-[10px] py-[2px]  mt-[6px]">
                     <p className="text-[14px]">English</p>
-                    <img src="../src/assets/asset 9.svg" className="h-[18px] ml-[6px] mt-[2px]" alt="" />
+                    <img src="../src/assets/asset 9.svg" className="h-[18px]  filter ml-[6px] mt-[2px]" alt="" />
                   </div>
         </div>
       </div>

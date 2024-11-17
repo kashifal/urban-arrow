@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { IoIosRefresh } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
 
 const SolanaPaymentLeft = () => {
@@ -8,14 +9,14 @@ const SolanaPaymentLeft = () => {
         <div className="md:col-span-5 px-4 text-white h-full flex py-14 bg-[#121417]">
             <div className="max-w-[350px] flex flex-col justify-between w-full mx-auto">
                 <div className="">
-                <div className="flex cursor-pointer group items-center gap-3">
+                <Link to="/product" className="flex cursor-pointer group items-center gap-3">
                     <div className="bg-white/5 text-gray-600 group-hover:text-white backdrop-blur-3xl rounded-full size-8 flex items-center justify-center">
                     <FaArrowLeftLong />
                     </div>
                     <p className="text-sm font-normal">Back to Shop</p>
-                </div>
+                </Link>
                 <div className="flex mt-10 cursor-pointer group items-center gap-3">
-                    <img src="../src/assets/fooDooggggLAnding.avif" alt="" className="w-8 rounded-lg" />
+                    <img src="../src/assets/fooDooggggLAnding.avif" alt="" className="filter w-8 rounded-lg" />
                     <p className="text-sm font-normal">dogwiftoolss</p>
                 </div>
                 <h1 className="font-normal pt-6">DogWifTools License</h1>
@@ -25,7 +26,7 @@ const SolanaPaymentLeft = () => {
                 <div className="mt- w-full">
                     <div className="flex items-start justify-between">
                         <div className="flex items-start gap-2">
-                            <img src="../src/assets/shopitem.avif" alt="" className="size-10 rounded-lg" />
+                            <img src="../src/assets/shopitem.avif" alt="" className="filter size-10 rounded-lg" />
                             <div className="">
                 <h1 className="font-light text-sm">DogWifTools License
                 </h1>

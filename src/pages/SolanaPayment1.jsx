@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import SolanaPaymentLeft from "../components/SolanaPaymentLeft";
+import { Link } from "react-router-dom";
 
 const SolanaPayment1 = () => {
+  const [buttonhide, setbuttonhide] = useState(false)
+  const setButton = () => {
+    setbuttonhide(true)
+    }
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-12 text-white bg-[#1B1F23] min-h-screen w-full">
@@ -15,7 +20,7 @@ const SolanaPayment1 = () => {
             </p>
               <ul className="mt-6 space-y-3">
                 <li>
-                  <label className="block text-white relative">
+                  <label onClick={setButton} className="block text-white relative">
                     <input
                       type="radio"
                       name="payment"
@@ -69,7 +74,7 @@ const SolanaPayment1 = () => {
                   </label>
                 </li>
               </ul>
-              <button className="mt-10 bg-[#818CF8] rounded-full py-2 text-center font-medium text-sm w-full hover:opacity-90">Update Invoice</button>
+              <Link to="/solanaPayment2" className={`mt-10 bg-[#818CF8] ${buttonhide ? 'block' : 'hidden'} rounded-full py-2 text-center font-medium text-sm w-full hover:opacity-90`}>Update Invoice</Link>
           </div>
         </div>
       </div>

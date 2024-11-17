@@ -21,7 +21,7 @@ const FAQ = () => {
                 <p>
                   How can I get in touch with support after I bought the product?
                 </p>
-                <img src="../src/assets/asset 9.svg" alt="Toggle Answer" />
+                <img src="../src/assets/asset 9.svg" className='filter' alt="Toggle Answer" />
               </div>
               {/* Hidden Answer */}
               <div id="answer-1" className="hidden text-[#a19e9e] mt-[10px]">
@@ -33,7 +33,7 @@ const FAQ = () => {
             <div className="bg-[rgb(14,14,14)] px-[20px] py-[24px] rounded-lg mt-[14px]">
               <div className="flex justify-between text-white items-center cursor-pointer" onclick="toggleAnswer(2)">
                 <p>Can I make payments using my preferred method?</p>
-                <img src="../src/assets/asset 9.svg" alt="Toggle Answer" />
+                <img src="../src/assets/asset 9.svg" className='filter' alt="Toggle Answer" />
               </div>
               {/* Hidden Answer */}
               <div id="answer-2" className="hidden text-[#a19e9e] mt-[10px]">
@@ -46,7 +46,7 @@ const FAQ = () => {
             <div className="bg-[rgb(14,14,14)] px-[20px] py-[24px] rounded-lg mt-[14px]">
               <div className="flex justify-between text-white items-center cursor-pointer" onclick="toggleAnswer(3)">
                 <p>Is it safe to make payments?</p>
-                <img src="../src/assets/asset 9.svg" alt="Toggle Answer" />
+                <img src="../src/assets/asset 9.svg" className='filter' alt="Toggle Answer" />
               </div>
               {/* Hidden Answer */}
               <div id="answer-3" className="hidden text-[#a19e9e] mt-[10px]">
@@ -59,7 +59,7 @@ const FAQ = () => {
             <div className="bg-[rgb(14,14,14)] px-[20px] py-[24px] rounded-lg mt-[14px]">
               <div className="flex justify-between text-white items-center cursor-pointer" onclick="toggleAnswer(4)">
                 <p>How do I make a purchase?</p>
-                <img src="../src/assets/asset 9.svg" alt="Toggle Answer" />
+                <img src="../src/assets/asset 9.svg" className='filter' alt="Toggle Answer" />
               </div>
               {/* Hidden Answer */}
               <div id="answer-4" className="hidden text-[#a19e9e] mt-[10px]">
@@ -73,7 +73,7 @@ const FAQ = () => {
             <div className="bg-[rgb(14,14,14)] px-[20px] py-[24px] rounded-lg mt-[10px]">
               <div className="flex justify-between text-white items-center cursor-pointer" onclick="toggleAnswer(5)">
                 <p>What is the return policy for purchases?</p>
-                <img src="../src/assets/asset 9.svg" alt="Toggle Answer" />
+                <img src="../src/assets/asset 9.svg" className='filter' alt="Toggle Answer" />
               </div>
               {/* Hidden Answer */}
               <div id="answer-5" className="hidden text-[#a19e9e] mt-[10px]">

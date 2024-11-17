@@ -6,20 +6,26 @@ import FAQ from "../components/FAQ";
 import Footer from "../components/Footer";
 import Integration from "../components/Integration";
 
-
-
 const Landing = () => {
   return (
     <>
-     <div className="bg-black text-white">
-     <HeaderLAnding />
-     <About />
-     <Integration />
-     <Pricing />
-     <FAQ />
-     <Footer />
+      <div className="bg-black text-white">
+        <section id="header">
+          <HeaderLAnding />
+        </section>
+        <section id="features">
 
-     </div>
+        <About />
+        </section>
+        <Integration />
+        <section id="pricing">
+          <Pricing />
+        </section>
+        <section id="faq">
+          <FAQ />
+        </section>
+        <Footer />
+      </div>
     </>
   );
 };

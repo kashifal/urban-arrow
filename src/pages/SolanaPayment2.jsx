@@ -2,6 +2,7 @@ import React from "react";
 import SolanaPaymentLeft from "../components/SolanaPaymentLeft";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import PaymentMethodCards from "../components/PaymentMethodCards";
+import { Link } from "react-router-dom";
 
 const SolanaPayment1 = () => {
   return (
@@ -11,10 +12,10 @@ const SolanaPayment1 = () => {
         <div className="md:col-span-7 px-4 py-16">
           <div className="max-w-[34rem] mx-auto">
             <div className="flex flex-wrap gap-5 items-center justify-between">
-              <div className="flex items-center gap-1 cursor-pointer w-fit text-[#737A84] hover:text-white">
+              <Link to="/solanaPayment1" className="flex items-center gap-1 cursor-pointer w-fit text-[#737A84] hover:text-white">
                 <MdOutlineKeyboardArrowLeft />
                 <p className="text-sm font-light">Change gateway</p>
-              </div>
+              </Link>
               <button className="px-3 py-1 bg-[#35241E] text-[#E16727] text-xs font-medium rounded-md">
                 Awaiting Payment
               </button>

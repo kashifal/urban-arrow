@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from '../components/NavBar'
 import FooterOther from '../components/FooterOther'
+import { Link } from 'react-router-dom'
 
 const Shop = () => {
   return (
@@ -125,15 +126,15 @@ const Shop = () => {
           <img
             src="../src/assets/shopitem.avif"
             alt="DogWifTools License"
-            className="w-full h-[201px] object-cover rounded-t-lg"
+            className="w-full filter h-[201px] object-cover rounded-t-lg"
           />
           {/* Cart Actions */}
           <div className="absolute inset-0  flex  justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30">
             <div className="flex  justify-center items-end   w-[100%]  ">
               {/* Add to Cart */}
-              <button className="bg-[#2A2B3F] w-[80vw] h-10 mb-5 mx-5 rounded-full  text-sm font-medium text-white  hover:bg-indigo-800">
+             <Link to="/checkout" className="bg-[#2A2B3F] w-[80vw] text-center items-center justify-center flex h-10 mb-5 mx-5 rounded-full  text-sm font-medium text-white  hover:bg-indigo-800">
                 Add to Cart
-              </button>
+              </Link>
             </div>
           </div>
         </div>

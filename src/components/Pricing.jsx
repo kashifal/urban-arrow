@@ -56,12 +56,16 @@ const Pricing = () => {
                   </p>
                 </div>
               </div>
+              <a target="_blank" href="/shop">
+
               <div className="relative mt-20 rounded-lg group w-full transition-all duration-200 bg-white/10 flex items-center jsutify-center group h-fit">
-                <button className="flex text-[#7F29AE] w-full group-hover:gap-4 transition-all duration-200 items-center gap-4 rounded-lg justify-center font-semibold text-sm  bg-white py-[9px] px-[18px]">
+               <button className="flex text-[#7F29AE] w-full group-hover:gap-4 transition-all duration-200 items-center gap-4 rounded-lg justify-center font-semibold text-sm  bg-white py-[9px] px-[18px]">
                   Purchase Today
                   <MdKeyboardArrowRight size={20}/>
                 </button>
               </div>
+              </a>
+
             </div>
           </div>
         </div>

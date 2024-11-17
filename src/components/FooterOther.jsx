@@ -9,7 +9,7 @@ const FooterOther = () => {
               <div className="col-span-8 h-full  flex flex-col justify-between text-white xs:col-span-12 md:col-span-8">
                 <div className="">
                 <div className="flex">
-                  <img src="../src/assets/asset 0.png" className="h-[30px] w-[30px] brightness-[-100]" alt="" />
+                  <img src="../src/assets/asset 0.png" className="h-[30px] filter w-[30px] brightness-[-100]" alt="" />
                   <p className="text-white ml-[6px] font-medium sm:text-[1.2rem] tracking-wider">
                     DogWifTools
                   </p>

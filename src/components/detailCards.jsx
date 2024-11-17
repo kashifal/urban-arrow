@@ -10,7 +10,7 @@ const DetailCards = ({head, desc,img}) => {
           {desc}
         </p>
        </div>
-        <img src={img} alt="" className=" w-[250px]" />
+        <img src={img} alt="" className="filter w-[250px]" />
       </div>
     </>
   );

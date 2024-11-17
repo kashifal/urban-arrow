@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import FooterOther from "../components/FooterOther";
 import { RxCross2 } from "react-icons/rx";
 import { RiCouponFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Checkout = () => {
   return (
@@ -19,7 +20,7 @@ const Checkout = () => {
                 <img
                   src="../src/assets/shopitem.avif"
                   alt=""
-                  className="sm:w-36 w-28 rounded-xl"
+                  className="sm:w-36 filter w-28 rounded-xl"
                 />
                 <div className="">
                 <h1 className="text-sm font-medium">DogWifTools License</h1>
@@ -100,7 +101,9 @@ const Checkout = () => {
                     <h4 className="font-medium">15.00 SOL</h4>
                 </div>
             </div>
+            <Link to="/solanaPayment1">
             <button className="bg-[#7983E8] py-2.5 rounded-full w-full text-center font-medium mt-8">Continue</button>
+            </Link>
           </div>
           </div>
           </div>

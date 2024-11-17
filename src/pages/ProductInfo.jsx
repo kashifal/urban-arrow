@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import 'swiper/css';                  
+import 'swiper/css/navigation';      
+import 'swiper/css/pagination';  
+import 'swiper/css/scrollbar';   
+
+
 import { FaPlus } from "react-icons/fa";
 
 import NavBar from "../components/NavBar";
@@ -65,7 +67,7 @@ const ProductInfo = () => {
               <Swiper
                 onSwiper={setSwiperInstance}
                 loop={true}
-                navigation
+                // navigation
                 pagination={{ clickable: true }}
                 className="w-full max-w-4xl mb-6"
               >
@@ -74,7 +76,7 @@ const ProductInfo = () => {
                     <img
                       src={image}
                       alt={`Product ${index}`}
-                      className="w-full rounded-lg shadow-md"
+                      className="w-full filter rounded-lg shadow-md"
                     />
                   </SwiperSlide>
                 ))}
@@ -92,7 +94,7 @@ const ProductInfo = () => {
                       src={image}
                       alt={`Thumbnail ${index}`}
                       onClick={() => handleThumbnailClick(index)}
-                      className="rounded-lg shadow-md cursor-pointer border-2 border-transparent hover:border-indigo-500 transition-all"
+                      className="rounded-lg filter shadow-md cursor-pointer border-2 border-transparent hover:border-indigo-500 transition-all"
                     />
                   </SwiperSlide>
                 ))}
