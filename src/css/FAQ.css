@@ -1,0 +1,45 @@
+img {
+    filter: brightness(0) invert(1);
+  }
+
+  /* Hide the navigation links by default on small screens */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: rgb(14, 14, 14);
+      position: absolute;
+      top: 70px;
+      left: 0;
+      z-index: 1000;
+      text-align: center;
+    }
+
+    .nav-links a {
+      padding: 15px 0;
+      display: block;
+      text-decoration: none;
+      color: white;
+    }
+
+    .burger-menu {
+      display: block;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 1001;
+    }
+
+    .nav-links.show {
+      display: flex;
+    }
+  }
+
+  /* Hide the burger menu on larger screens */
+  @media (min-width: 768px) {
+    .burger-menu {
+      display: none;
+    }
+  }
