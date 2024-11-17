@@ -12,3 +12,7 @@
   .bg-gradient-hover:hover {
     background: radial-gradient(circle at center bottom, rgba(255, 255, 255, 0.1) 30%, rgba(0, 0, 0, 1) 100%);
   }
+
+  .descScroller::-webkit-scrollbar{
+    display: none;
+  }

@@ -10,6 +10,8 @@ import Reviews from "./pages/Reviews";
 import Checkout from "./pages/Checkout";
 import SolanaPayment1 from "./pages/SolanaPayment1";
 import SolanaPayment2 from "./pages/SolanaPayment2";
+import Product from "./pages/Product";
+import ProductInfo from "./pages/ProductInfo";
 
 const App = () => {
   return (
@@ -21,8 +23,10 @@ const App = () => {
     {/* <Contact /> */}
     {/* <Reviews /> */}
     {/* <Checkout /> */}
-    <SolanaPayment1 />
+    {/* <SolanaPayment1 /> */}
     {/* <SolanaPayment2 /> */}
+    {/* <Product /> */}
+    <ProductInfo />
       <Routes>
         <Route path=""  />
       </Routes>
