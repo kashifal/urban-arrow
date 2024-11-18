@@ -12,6 +12,8 @@ import SolanaPayment1 from "./pages/SolanaPayment1";
 import SolanaPayment2 from "./pages/SolanaPayment2";
 import Product from "./pages/Product";
 import ProductInfo from "./pages/ProductInfo";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   return (
@@ -26,6 +28,7 @@ const App = () => {
       {/* <SolanaPayment2 /> */}
       {/* <Product /> */}
       {/* <ProductInfo /> */}
+      <ToastContainer />
 
       <Routes>
         <Route path="/" element={<Landing />} />

@@ -16,8 +16,8 @@ const SolanaPaymentLeft = () => {
                     <p className="text-sm font-normal">Back to Shop</p>
                 </Link>
                 <div className="flex mt-10 cursor-pointer group items-center gap-3">
-                    <img src="../src/assets/fooDooggggLAnding.avif" alt="" className="filter w-8 rounded-lg" />
-                    <p className="text-sm font-normal">dogwiftoolss</p>
+                    <img src="../src/assets/bull.png" alt="" className="filter w-8 rounded-lg" />
+                    <i><p className="text-sm font-bold">Bull Runner</p></i>
                 </div>
                 <h1 className="font-normal pt-6">DogWifTools License</h1>
                 <h1 className="font-normal pt-1 text-lg pb-6">15.00

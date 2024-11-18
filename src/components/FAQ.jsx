@@ -8,9 +8,9 @@ const FAQ = () => {
     <div className=" max-w-[74rem] mx-auto lg:px-0 px-4  py-32">
       <div className="flex flex-col jsutify-center items-center">
         <DiscordLink />
-        <h1 className="sm:text-5xl text-4xl leading-tight text-center pt-8 pb-5 font-medium">
+        <h1 className="sm:text-5xl  text-transparent bg-clip-text bg-gradient-to-r from-[#411C8E] to-[#FF00C0] text-4xl leading-tight text-center pt-8 pb-5 font-medium">
           Frequently
-          <span className="opacity-50 lg:ml-2">
+          <span className="opacity-80 text-white lg:ml-2">
             asked
             <br /> questions
           </span>

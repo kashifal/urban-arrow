@@ -2,8 +2,22 @@ import React from 'react'
 import NavBar from '../components/NavBar'
 import FooterOther from '../components/FooterOther'
 import { Link } from 'react-router-dom'
-
+import { addToCart } from '../redux/cartSlice'
+import { useDispatch } from 'react-redux'
+import { toast } from 'react-toastify';
 const Shop = () => {
+  const dispatch = useDispatch();
+
+  const products = [
+    { id: 1, name: 'Product 1', price: 100 },
+    { id: 2, name: 'Product 2', price: 200 },
+    { id: 3, name: 'Product 3', price: 300 },
+  ];
+
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(products[0]));
+    toast.success(`${products[0].name} has been added to the cart!`);
+  };
   return (
     <>
  <div className="bg-black text-white  min-h-screen">
@@ -132,9 +146,9 @@ const Shop = () => {
           <div className="absolute inset-0  flex  justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30">
             <div className="flex  justify-center items-end   w-[100%]  ">
               {/* Add to Cart */}
-             <Link to="/checkout" className="bg-[#2A2B3F] w-[80vw] text-center items-center justify-center flex h-10 mb-5 mx-5 rounded-full  text-sm font-medium text-white  hover:bg-indigo-800">
+             <button   onClick={() => handleAddToCart()} className="bg-[#2A2B3F] w-[80vw] text-center items-center justify-center flex h-10 mb-5 mx-5 rounded-full  text-sm font-medium text-white  hover:bg-[#FF00C0]">
                 Add to Cart
-              </Link>
+              </button>
             </div>
           </div>
         </div>

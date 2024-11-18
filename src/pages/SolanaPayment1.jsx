@@ -26,7 +26,7 @@ const SolanaPayment1 = () => {
                       name="payment"
                       className="sr-only peer"
                     />
-                    <div className="w-full py-2 cursor-pointer rounded-lg border border-white/10   peer-checked:border-[#6A3CE2] duration-200">
+                    <div className="w-full py-2 cursor-pointer rounded-lg border border-white/10   peer-checked:border-[#FF00C0] duration-200">
                       <div className="pl-2 flex items-center gap-2">
                         <svg
                           width="30"
@@ -74,7 +74,7 @@ const SolanaPayment1 = () => {
                   </label>
                 </li>
               </ul>
-              <Link to="/solanaPayment2" className={`mt-10 bg-[#818CF8] ${buttonhide ? 'block' : 'hidden'} rounded-full py-2 text-center font-medium text-sm w-full hover:opacity-90`}>Update Invoice</Link>
+              <Link to="/solanaPayment2" className={`mt-10 bg-[#FF00C0] ${buttonhide ? 'block' : 'hidden'} rounded-full py-2 text-center font-medium text-sm w-full hover:opacity-90`}>Update Invoice</Link>
           </div>
         </div>
       </div>

@@ -15,8 +15,8 @@ const FAQItems = ({ question, answer }) => {
       <div className="px-6 py-6 cursor-pointer border-white/5 border bg-white/5 backdrop-blur-3xl rounded-2xl">
         <div className="flex items-center justify-between gap-2" onClick={handleToggle}>
           <h1 className="sm:text-lg text-sm font-semibold">{question}</h1>
-          <div className="w-10 h-10 shrink-0 cursor-pointer text-white rounded-xl bg-white/5 backdrop-blur-3xl flex items-center justify-center">
-            <span className='text-white'>
+          <div className="w-10 h-10 shrink-0 cursor-pointer text-black rounded-xl  bg-gradient-to-r text-sm    bg-[#FF00C0]   flex items-center justify-center">
+            <span className='text-black'>
               {/* Toggle between IoAdd and IoRemove based on isOpen */}
               {isOpen ? <IoRemove /> : <IoAdd />}
             </span>

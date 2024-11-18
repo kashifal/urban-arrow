@@ -4,7 +4,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { BsFillPlayFill } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from 'react-scroll';
-
+import layers from '../assets/layers.png'
 const HeaderLAnding = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const toggleDrawer = () => {
@@ -20,12 +20,13 @@ const HeaderLAnding = () => {
 
   return (
     <>
+    <img className='fixed top-0 right-0 h-[100vh] z-0 w-auto' src={layers} alt="" />
+    <div className="fixed -top-[350px]  blur-3xl opacity-30 -left-[350px] bg-gradient-to-tr h-[1000px] -z-0 rounded-full w-[1000px] from-[#FF00C0] to-[#411C8E]"></div>
      <div className="bg-[#000000] text-white min-h-screen w-full">
-        <div className="w-full border-b bg-[#070708] border-white/10  py-[18px]">
+        <div className="w-full border-b bg-[#070708]/30 relative border-white/10 z-50  top-0  py-[18px]">
           <div className=" max-w-[74rem] mx-auto lg:px-0 px-4 flex items-center justify-between md:grid grid-cols-3">
             <Link to="/" className="flex cursor-pointer items-center gap-3">
-              <img src="../src/assets/logo.avif" alt="" className="filter size-10" />
-              <p className="text-sm font-medium">DogWifTools</p>
+              <img src="../src/assets/abc.png" alt="" className="filter  h-10  w-auto" />  
             </Link>
             <div className="bg-[#101010] md:flex hidden w-fit mx-auto border border-white/5 p-1 rounded-full items-center gap-1">
             {menuItems.map((item, index) => (
@@ -73,12 +74,12 @@ const HeaderLAnding = () => {
     </div>
           </div>
         </div>
-        <div className=" max-w-[74rem] mx-auto lg:px-0 px-4  py-16">
+        <div className=" max-w-[74rem] mx-auto lg:px-0  px-4  py-16">
           <div className="flex flex-col jsutify-center items-center">
             <DiscordLink />
-            <h1 className="sm:text-6xl text-3xl text-center pt-8 pb-5 font-medium">
+            <h1 className="sm:text-7xl relative z-50 text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#411C8E] to-[#FF00C0] text-center pt-8 pb-5 font-medium">
               All-In-One{" "}
-              <span className="opacity-50">
+              <span className="opacity-80 text-white">
                 Pump.fun
                 <br /> Software
               </span>
@@ -90,7 +91,7 @@ const HeaderLAnding = () => {
             <div className="pt-7 justify-center flex-wrap flex items-center gap-6">
             <a target='_blank' href="/shop">
             <div className="relativ rounded-lg group transition-all duration-200  flex items-center jsutify-center group h-fit w-fit">
-                <button className="flex text-[#7F29AE] group-hover:gap-4 transition-all duration-200 items-center gap-1 rounded-lg font-semibold text-sm  bg-white py-[9px] px-[18px]">
+                <button className="flex text-[#FF00C0] group-hover:gap-4 transition-all duration-200 items-center gap-1 rounded-full font-semibold text-sm  bg-white  px-6 py-3">
                   Purchase Today
                   <MdKeyboardArrowRight size={20}/>
                 </button>
@@ -98,7 +99,7 @@ const HeaderLAnding = () => {
             </a>
               <a href="https://www.youtube.com/watch?v=8HSQdpHETBo" target='_blank'>
               <div className="relative  rounded-lg group transition-all duration-200  flex items-center jsutify-center group h-fit w-fit">
-                <button className="flex flex-row-reverse group-hover:gap-4 border border-white/5 transition-all bg-white/5 backdrop-blur-lg duration-200 items-center gap-1 rounded-lg font-semibold text-sm  bg-white py-[9px] px-[18px]">
+                <button className="flex flex-row-reverse group-hover:gap-4  px-6 py-3 font-medium text-black rounded-full bg-gradient-to-r text-sm  from-[#FF00C0] to-[#411C8E] shadow-lg hover:scale-105 transform transition">
                   Watch Video
                   <BsFillPlayFill size={20}/>
                 </button>
@@ -107,7 +108,7 @@ const HeaderLAnding = () => {
             </div>
           </div>
         </div>
-        <div className="w-[98%] bg-[#ffffff05] flex items-center justify-center border border-white/5 rounded-3xl overflow-hidden [#040404] backdrop-blur-3xl h-[90vh] mx-auto">
+        <div className="w-[78%] bg-[#ffffff05] relative z-50 flex items-center justify-center border border-white/5 rounded-3xl overflow-hidden [#040404] backdrop-blur-3xl my-20 h-[60vh] mx-auto">
         <div className=" max-w-[74rem] mx-auto p-4  w-full shadow shadow-white/10 bg-[#ffffff00] border border-white/5 relative overflow-hidden flex flex-col jusitfy-end items-end rounded-3xl [#040404] backdrop-blur-3xl h-[95%]">
         <audio src="../src/assets/headerAudio.mp4" className="w-full mt-auto" controls></audio>
         </div>

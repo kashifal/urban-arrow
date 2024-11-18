@@ -58,12 +58,12 @@ const Pricing = () => {
               </div>
               <a target="_blank" href="/shop">
 
-              <div className="relative mt-20 rounded-lg group w-full transition-all duration-200 bg-white/10 flex items-center jsutify-center group h-fit">
-               <button className="flex text-[#7F29AE] w-full group-hover:gap-4 transition-all duration-200 items-center gap-4 rounded-lg justify-center font-semibold text-sm  bg-white py-[9px] px-[18px]">
-                  Purchase Today
+              
+               <button className="px-6 mt-8 py-3 font-medium w-full flex flex-row-reverse justify-center items-center gap-2 text-black rounded-full bg-gradient-to-r text-sm  from-[#FF00C0] to-[#411C8E] shadow-lg hover:scale-105 transform transition">
+                <span>  Purchase Today</span>
                   <MdKeyboardArrowRight size={20}/>
                 </button>
-              </div>
+               
               </a>
 
             </div>

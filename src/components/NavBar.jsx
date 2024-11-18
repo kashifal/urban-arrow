@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import '../css/FAQ.css'
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from 'react-router-dom';
-
+import { useSelector, useDispatch } from 'react-redux';
 
 const NavBar = () => {
+  const cartItems = useSelector((state) => state.cart.items);
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const toggleDrawer = () => {
       setIsDrawerOpen(!isDrawerOpen); 
@@ -17,10 +18,8 @@ const NavBar = () => {
             <div className=" max-w-[68rem] mx-auto flex items-center justify-between pt-[14px] relative">
               <div className="col-span-3 xs:col-span-2 sm:col-span-6 md:col-span-3">
                 <Link to='/shop' className="flex cursor-pointer items-center">
-                  <img src="../src/assets/asset 0.png" className="h-[36px] filter w-[40px] brightness-[-100]" alt="" />
-                  <p className="text-white ml-[6px] font-medium sm:text-[1.5rem] tracking-wider xs:hidden sm:block">
-                    DogWifTools
-                  </p>
+                  <img src="../src/assets/abc.png" className="h-8 filter w-auto brightness-[-100]" alt="" />
+                  
                 </Link>
               </div>
              
@@ -41,15 +40,12 @@ const NavBar = () => {
                     <p className="text-[14px]">Solana</p>
                     <img src="../src/assets/asset 9.svg" className="h-[18px]  ml-[6px] mt-[2px]" alt="" />
                   </div>
-                  <div className="sm:flex hidden border border-[#646363] rounded-full px-[10px] py-[2px] ml-[20px] mt-[6px]">
-                    <p className="text-[14px]">English</p>
-                    <img src="../src/assets/asset 9.svg" className="h-[18px]  ml-[6px] mt-[2px]" alt="" />
-                  </div>
-                  <div className="flex mt-[6px]">
-                    <img src="../src/assets/asset 3.svg" className="h-[24px]   ml-[10px]" alt="" />
+                   
+                  <Link to={'/checkout'} className="flex mt-[6px]">
+                    {/* <img src="../src/assets/asset 3.svg" className="h-[24px]   ml-[10px]" alt="" /> */}
                     <img src="../src/assets/asset 7.svg" className="h-[24px]  ml-[20px]" alt="" />
-                    <p className="ml-[10px]">0</p>
-                  </div>
+                    <p className="ml-[10px]">{cartItems.length}</p>
+                  </Link>
                 </div>
                 <div className="relative text-white z-[9999] md:hidden block">
       <div className="cursor-pointer" onClick={toggleDrawer}>

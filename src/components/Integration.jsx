@@ -61,9 +61,9 @@ const Integration = () => {
       <div className="-mt-20 relative z-[9999] max-w-[74rem] mx-auto lg:px-0 px-4  ">
         <div className="flex flex-col jsutify-center items-center">
           <DiscordLink />
-          <h1 className="sm:text-5xl pt-8 text-3xl text-center  pb-5 font-medium">
+          <h1 className="sm:text-5xl pt-8  text-transparent bg-clip-text bg-gradient-to-r from-[#411C8E] to-[#FF00C0] text-3xl text-center  pb-5 font-medium">
             Integrations for
-            <span className="opacity-50 lg:ml-2">
+            <span className="opacity-80 text-white lg:ml-2">
               everything
               <br /> Solana
             </span>
