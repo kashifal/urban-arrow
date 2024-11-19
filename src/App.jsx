@@ -6,6 +6,8 @@ import Terms from "./pages/Terms";
 import FAQ from "./pages/FAQ";
 import Shop from "./pages/Shop";
 import Contact from "./pages/Contact";
+import { useTranslation } from 'react-i18next';
+
 import Reviews from "./pages/Reviews";
 import Checkout from "./pages/Checkout";
 import SolanaPayment1 from "./pages/SolanaPayment1";
@@ -16,6 +18,11 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    localStorage.setItem('language', lang); // Save the selected language to localStorage
+  };
   return (
     <>
       {/* <Terms /> */}
@@ -29,7 +36,14 @@ const App = () => {
       {/* <Product /> */}
       {/* <ProductInfo /> */}
       <ToastContainer />
-
+      <div>
+      <h1>{t('welcome')}</h1>
+      <p>{t('hello')}</p>
+      
+      {/* Language Switcher */}
+      <button onClick={() => changeLanguage('en')}>English</button>
+      <button onClick={() => changeLanguage('es')}>Español</button>
+    </div>
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/shop" element={<Shop />} />
