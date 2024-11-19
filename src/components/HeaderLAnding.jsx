@@ -5,6 +5,7 @@ import { BsFillPlayFill } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from 'react-scroll';
 import layers from '../assets/layers.png'
+import abc from '../assets/abc.png'
 const HeaderLAnding = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const toggleDrawer = () => {
@@ -26,7 +27,7 @@ const HeaderLAnding = () => {
         <div className="w-full border-b bg-[#070708]/30 relative border-white/10 z-50  top-0  py-[18px]">
           <div className=" max-w-[74rem] mx-auto lg:px-0 px-4 flex items-center justify-between md:grid grid-cols-3">
             <Link to="/" className="flex cursor-pointer items-center gap-3">
-              <img src="../src/assets/abc.png" alt="" className="filter  h-10  w-auto" />  
+              <img src={abc} alt="" className="filter  h-10  w-auto" />  
             </Link>
             <div className="bg-[#101010] md:flex hidden w-fit mx-auto border border-white/5 p-1 rounded-full items-center gap-1">
             {menuItems.map((item, index) => (

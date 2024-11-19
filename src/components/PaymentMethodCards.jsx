@@ -9,6 +9,8 @@ import {
 import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import SolanaWalletQR from '../assets/SolanaWalletQR.png'
+import pay4 from '../assets/pay4.svg'
+
 const PaymentMethodCards = () => {
   const [open, setOpen] = useState(true);
   const [qr, setQr] = useState(0);
@@ -39,7 +41,7 @@ const PaymentMethodCards = () => {
                     <div className="flex items-center gap-2">
                       <span className="overflow-hidden rounded-lg">
                         <img
-                          src="../src/assets/pay4.svg"
+                          src={pay4}
                           alt=""
                           className="shrink-0"
                         />
@@ -182,7 +184,7 @@ const PaymentMethodCards = () => {
       <div onClick={() => modalFunc(0)} className="bg-[#121417] cursor-pointer group border border-white/10 rounded-lg px-4 py-2.5 flex items-center justify-between ">
         <div className="flex items-center gap-2">
           <span className=" rounded-lg overflow-hidden">
-            <img src="../src/assets/pay4.svg" alt="" className="shrink-0 " />
+            <img src={pay4} alt="" className="shrink-0 " />
           </span>
           <p className="font-light text-sm">Pay With QR Code</p>
         </div>
@@ -193,7 +195,7 @@ const PaymentMethodCards = () => {
       <div onClick={() => modalFunc(1)} className="bg-[#121417] cursor-pointer group border border-white/10 rounded-lg px-4 py-2.5 flex items-center justify-between ">
         <div className="flex items-center gap-2">
           <span className=" rounded-lg overflow-hidden">
-            <img src="../src/assets/pay4.svg" alt="" className="shrink-0 " />
+            <img src={pay4} alt="" className="shrink-0 " />
           </span>
           <p className="font-light text-sm">Copy Patyment Details</p>
         </div>
