@@ -2,7 +2,8 @@ import React from 'react'
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { IoIosRefresh } from "react-icons/io";
 import { Link } from 'react-router-dom';
-
+import bull from '../assets/bull.png'
+import shopItem from '../assets/shopitem.avif'
 
 const SolanaPaymentLeft = () => {
   return (
@@ -16,7 +17,7 @@ const SolanaPaymentLeft = () => {
                     <p className="text-sm font-normal">Back to Shop</p>
                 </Link>
                 <div className="flex mt-10 cursor-pointer group items-center gap-3">
-                    <img src="../src/assets/bull.png" alt="" className="filter w-8 rounded-lg" />
+                    <img src={bull} alt="" className="filter w-8 rounded-lg" />
                     <i><p className="text-sm font-bold">Bull Runner</p></i>
                 </div>
                 <h1 className="font-normal pt-6">DogWifTools License</h1>
@@ -26,7 +27,7 @@ const SolanaPaymentLeft = () => {
                 <div className="mt- w-full">
                     <div className="flex items-start justify-between">
                         <div className="flex items-start gap-2">
-                            <img src="../src/assets/shopitem.avif" alt="" className="filter size-10 rounded-lg" />
+                            <img src={shopItem} alt="" className="filter size-10 rounded-lg" />
                             <div className="">
                 <h1 className="font-light text-sm">DogWifTools License
                 </h1>

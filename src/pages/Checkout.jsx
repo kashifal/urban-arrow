@@ -5,6 +5,7 @@ import { RxCross2 } from "react-icons/rx";
 import { RiCouponFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import shopItem from '../assets/shopitem.avif'
 
 const Checkout = () => {
   const cartItems = useSelector((state) => state.cart.items);
@@ -23,7 +24,7 @@ const Checkout = () => {
                 <div className="border flex sm:flex-row flex-col items-start justify-between border-white/5 bg-white/5 backdrop-blur-3xl sm:p-5 p-2 rounded-xl">
                 <div className="flex items-start gap-2">
                   <img
-                    src="../src/assets/shopitem.avif"
+                    src={shopItem}
                     alt=""
                     className="sm:w-36 filter w-28 rounded-xl"
                   />
