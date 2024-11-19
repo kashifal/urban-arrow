@@ -3,7 +3,10 @@ import { BsTwitterX } from "react-icons/bs";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { BsFillPlayFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-
+import download from '../assets/download.png'
+import bull from '../assets/bull.png'
+import abc from '../assets/abc.png'
+import discordIcon from '../assets/discordICon.avif'
 
 const Footer = () => {
   return (
@@ -11,13 +14,13 @@ const Footer = () => {
   <div className="pt-28 flex  flex-col pb-20 items-center jsutify-center relative">
     <div className="w-full  h-[270px] bg-white-glow opacity-100 absolute top-[60%]">
       <img
-        src="../src/assets/download.png"
+        src={download}
         className="left=[0%] filter top-[80%] w-[80%] h-[250px] object-cover"
         alt=""
       />
     </div>
     <img
-      src="../src/assets/bull.png"
+      src={bull}
       alt=""
       className="h-32 w-auto filter  roudned-xl"
     />
@@ -55,7 +58,7 @@ const Footer = () => {
 
       <div className="bg-black relative z-[999] sm:flex-row flex-col sm:gap-3 gap-6 px-8 py-4 flex items-center justify-between">
       <div className="flex cursor-pointer items-center gap-3">
-              <img src="../src/assets/abc.png" alt="" className="h-10 w-auto filter" />
+              <img src={abc} alt="" className="h-10 w-auto filter" />
              
             </div>
             <div className="flex flex-col text-center gap-1 justify-center">
@@ -70,7 +73,7 @@ const Footer = () => {
 
                 </button>
                 <button className="bg-white/5 text-white/50 rounded-xl size-10 backdrop-blur-3xl border-white/5 border flex items-center justify-center">
-               <img src="../src/assets/discordICon.avif" alt="" className="size-6" />
+               <img src={discordIcon} alt="" className="size-6" />
 
                 </button>
             </div>

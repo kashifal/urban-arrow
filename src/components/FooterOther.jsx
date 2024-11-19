@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaDiscord } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
+import abc from '../assets/abc.png'
 
 const FooterOther = () => {
   return (
@@ -9,7 +10,7 @@ const FooterOther = () => {
               <div className="col-span-8 h-full  flex flex-col justify-between text-white xs:col-span-12 md:col-span-8">
                 <div className="">
                 <div className="flex">
-                  <img src="../src/assets/abc.png" className="h-8 filter w-auto brightness-[-100]" alt="" />
+                  <img src={abc} className="h-8 filter w-auto brightness-[-100]" alt="" />
                   
                 </div>
                 <p className=" text-[14px] font-normal mt-[10px]">

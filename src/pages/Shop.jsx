@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 import { addToCart } from '../redux/cartSlice'
 import { useDispatch } from 'react-redux'
 import { toast } from 'react-toastify';
+import shopItem from '../assets/shopitem.avif'
+
 const Shop = () => {
   const dispatch = useDispatch();
 
@@ -138,7 +140,7 @@ const Shop = () => {
         {/* Product Image */}
         <div className="relative">
           <img
-            src="../src/assets/shopitem.avif"
+            src={shopItem}
             alt="DogWifTools License"
             className="w-full filter h-[201px] object-cover rounded-t-lg"
           />

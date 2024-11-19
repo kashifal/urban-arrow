@@ -6,6 +6,7 @@ import { GrBundle } from "react-icons/gr";
 import { GiNotebook } from "react-icons/gi";
 import { SiStackshare } from "react-icons/si";
 import DetailCards from "./detailCards";
+import card1 from '../assets/card1.avif'
 
 const About = () => {
   return (
@@ -59,7 +60,7 @@ const About = () => {
         <div className="xl:col-span-4">
         <DetailCards
             head={"Launch Your Token with Ease"}
-            img={"../src/assets/card1.avif"}
+            img={card1}
             desc={
               "Ensure multiple wallet buys. Prevent snipers from buying before you."
             }
@@ -68,7 +69,7 @@ const About = () => {
           <div className="xl:col-span-4">
           <DetailCards
             head={"Boost Your Token’s Volume in Multiple Ways"}
-            img={"../src/assets/card1.avif"}
+            img={card1}
             desc={
               "Automate volume, micro-buys, bumps, and more—everything to keep your token active."
             }
@@ -77,7 +78,7 @@ const About = () => {
           <div className="xl:col-span-4">
           <DetailCards
             head={"GUI Focused on User Experience"}
-            img={"../src/assets/card1.avif"}
+            img={card1}
             desc={
               "Our Intuitive layout make it incredibly easy to use."
             }
@@ -86,7 +87,7 @@ const About = () => {
             <div className="xl:col-span-4">
             <DetailCards
             head={"Bypass Bubble Map Detection Seamlessly"}
-            img={"../src/assets/card1.avif"}
+            img={card1}
             desc={
               "Prevent wallets from being detected on bubble maps."
             }
@@ -95,7 +96,7 @@ const About = () => {
             <div className="xl:col-span-8 h-fit">
             <DetailCards
             head={"Pump.Fun to Raydium"}
-            img={"../src/assets/card1.avif"}
+            img={card1}
             desc={
               "Easily manage your token's transition to Raydium"
             }

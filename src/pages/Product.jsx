@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import FooterOther from "../components/FooterOther";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Card from "../components/ReviewCard";
+import shopItem from '../assets/shopitem.avif'
 
 const Product = () => {
   const cardsData = Array.from({ length: 3 }, (_, index) => ({
@@ -28,7 +29,7 @@ const Product = () => {
             {/* Product Image */}
             <div className="relative">
               <img
-                src="../src/assets/shopitem.avif"
+                src={shopItem}
                 alt="DogWifTools License"
                 className="w-full filter h-[201px] object-cover rounded-t-lg"
               />

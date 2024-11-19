@@ -3,6 +3,9 @@ import '../css/FAQ.css'
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import abc from '../assets/abc.png'
+import asset9 from '../assets/asset 9.svg'
+import asset7 from '../assets/asset 7.svg'
 
 const NavBar = () => {
   const cartItems = useSelector((state) => state.cart.items);
@@ -18,7 +21,7 @@ const NavBar = () => {
             <div className=" max-w-[68rem] mx-auto flex items-center justify-between pt-[14px] relative">
               <div className="col-span-3 xs:col-span-2 sm:col-span-6 md:col-span-3">
                 <Link to='/shop' className="flex cursor-pointer items-center">
-                  <img src="../src/assets/abc.png" className="h-8 filter w-auto brightness-[-100]" alt="" />
+                  <img src={abc} className="h-8 filter w-auto brightness-[-100]" alt="" />
                   
                 </Link>
               </div>
@@ -38,12 +41,11 @@ const NavBar = () => {
                 <div className="flex">
                   <div className="sm:flex hidden border border-[#646363] rounded-full px-[10px] py-[2px]  mt-[6px]">
                     <p className="text-[14px]">Solana</p>
-                    <img src="../src/assets/asset 9.svg" className="h-[18px]  ml-[6px] mt-[2px]" alt="" />
+                    <img src={asset9} className="h-[18px]  ml-[6px] mt-[2px]" alt="" />
                   </div>
                    
                   <Link to={'/checkout'} className="flex mt-[6px]">
-                    {/* <img src="../src/assets/asset 3.svg" className="h-[24px]   ml-[10px]" alt="" /> */}
-                    <img src="../src/assets/asset 7.svg" className="h-[24px]  ml-[20px]" alt="" />
+                    <img src={asset7} className="h-[24px]  ml-[20px]" alt="" />
                     <p className="ml-[10px]">{cartItems.length}</p>
                   </Link>
                 </div>
@@ -69,11 +71,11 @@ const NavBar = () => {
           ))}
             <div className="flex border w-full border-[#646363] rounded-full justify-center px-[10px] py-[2px]  mt-[6px]">
                     <p className="text-[14px]">Solana</p>
-                    <img src="../src/assets/asset 9.svg" className="h-[18px] ml-[6px] mt-[2px]" alt="" />
+                    <img src={asset9} className="h-[18px] ml-[6px] mt-[2px]" alt="" />
                   </div>
                   <div className="flex w-full border border-[#646363] justify-center rounded-full px-[10px] py-[2px]  mt-[6px]">
                     <p className="text-[14px]">English</p>
-                    <img src="../src/assets/asset 9.svg" className="h-[18px]  filter ml-[6px] mt-[2px]" alt="" />
+                    <img src={asset9} className="h-[18px]  filter ml-[6px] mt-[2px]" alt="" />
                   </div>
         </div>
       </div>
