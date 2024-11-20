@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next';
 import NavBar from "../components/NavBar";
 import FooterOther from "../components/FooterOther";
 import Card from "../components/ReviewCard";
+import shopItem from '../assets/shopitem.avif'
 
 const ProductInfo = () => {
   const { t } = useTranslation();  // Translation hook
@@ -32,9 +33,9 @@ const ProductInfo = () => {
   const [swiperInstance, setSwiperInstance] = useState(null);
 
   const images = [
-    "../src/assets/shopitem.avif",
-    "../src/assets/shopitem.avif",
-    "../src/assets/shopitem.avif",
+    shopItem,
+    shopItem,
+    shopItem,
   ];
 
   const handleThumbnailClick = (index) => {
