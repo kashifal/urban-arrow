@@ -49,7 +49,7 @@ const HeaderLAnding = () => {
       </div>
 
       <div
-        className={`fixed top-0 right-0 w-64 h-full bg-[#101010] p-6 transform transition-transform duration-300 ${
+        className={`fixed top-0 z-[99999] right-0 w-64 h-full bg-[#101010] p-6 transform transition-transform duration-300 ${
           isDrawerOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -75,10 +75,10 @@ const HeaderLAnding = () => {
     </div>
           </div>
         </div>
-        <div className=" max-w-[74rem] mx-auto lg:px-0  px-4  py-16">
+        <div className="-z-[4] max-w-[74rem] mx-auto lg:px-0  px-4  py-16">
           <div className="flex flex-col jsutify-center items-center">
             <DiscordLink />
-            <h1 className="sm:text-8xl relative z-50 text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#411C8E] to-[#FF00C0] text-center pt-8 pb-5 font-medium">
+            <h1 className="sm:text-8xl relative  text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#411C8E] to-[#FF00C0] text-center pt-8 pb-5 font-medium">
               All-In-One{" "}
                 
               <span className="opacity-80 text-white">
@@ -110,7 +110,7 @@ const HeaderLAnding = () => {
             </div>
           </div>
         </div>
-        <div className="w-[78%] bg-[#ffffff05] relative z-50 flex items-center justify-center border border-white/5 rounded-3xl overflow-hidden [#040404] backdrop-blur-3xl my-20 h-[60vh] mx-auto">
+        <div className="w-[78%] bg-[#ffffff05] relative  flex items-center justify-center border border-white/5 rounded-3xl overflow-hidden [#040404] backdrop-blur-3xl my-20 h-[60vh] mx-auto">
         <div className=" max-w-[74rem] mx-auto p-4  w-full shadow shadow-white/10 bg-[#ffffff00] border border-white/5 relative overflow-hidden flex flex-col jusitfy-end items-end rounded-3xl [#040404] backdrop-blur-3xl h-[95%]">
         <audio src="../src/assets/headerAudio.mp4" className="w-full mt-auto" controls></audio>
         </div>
