@@ -11,18 +11,16 @@ import { useTranslation } from 'react-i18next';
 import Reviews from "./pages/Reviews";
 import Checkout from "./pages/Checkout";
 import SolanaPayment1 from "./pages/SolanaPayment1";
-import SolanaPayment2 from "./pages/SolanaPayment2";
+import EthPay from "./pages/eth-payment";
+import BnbPay from "./pages/bnb-payment";
+import SolPay from "./pages/sol-payment";
 import Product from "./pages/Product";
 import ProductInfo from "./pages/ProductInfo";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
-  const { t, i18n } = useTranslation();
-  const changeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-    localStorage.setItem('language', lang); // Save the selected language to localStorage
-  };
+ 
   return (
     <>
       {/* <Terms /> */}
@@ -37,13 +35,7 @@ const App = () => {
       {/* <ProductInfo /> */}
       <ToastContainer />
       <div>
-      <h1>{t('welcome')}</h1>
-      <p>{t('hello')}</p>
       
-      {/* Language Switcher */}
-      <button onClick={() => changeLanguage('en')} className="cursor-pointer">English</button>
-      <button onClick={() => changeLanguage('es')} className="cursor-pointer">Español</button>
-      <button onClick={() => changeLanguage('fr')} className="cursor-pointer">Freanch</button>
     </div>
       <Routes>
         <Route path="/" element={<Landing />} />
@@ -54,7 +46,9 @@ const App = () => {
         <Route path="/terms" element={<Terms />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/solanaPayment1" element={<SolanaPayment1 />} />
-        <Route path="/solanaPayment2" element={<SolanaPayment2 />} />
+        <Route path="/eth-payment" element={<EthPay />} />
+        <Route path="/bnb-payment" element={<BnbPay />} />
+        <Route path="/sol-payment" element={<SolPay />} />
         <Route path="/product" element={<Product />} />
         <Route path="/productInfo" element={<ProductInfo />} />
       </Routes>

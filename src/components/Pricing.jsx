@@ -13,7 +13,7 @@ const Pricing = () => {
           <h1 className="text-5xl text-center py-5 ">Pricing</h1>
           <div className="mt-10 px-4 py-8 rounded-2xl max-w-sm w-full min-h-[60vh] border border-white/5 bg-white/5 backdrop-blur-3xl">
             <div className="w-[75%] mx-auto flex flex-col justify-center">
-              <p className="font-medium text-sm text-center">DogWifTools 1.0</p>
+              <p className="font-medium text-sm text-center">BullRunner 1.0</p>
               <h1 className="py-5 text-5xl text-center font-semibold">
                 15 SOL
               </h1>
