@@ -17,9 +17,9 @@ const FAQ = () => {
         </h1>
       </div>
       <div className="max-w-3xl mx-auto mt-20 flex flex-col gap-2">
-        <FAQItems question={'What is DogWifTools?'} answer={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus error, dolorum magni hic quaerat quae eum debitis est laborum nesciunt optio eius eos esse corporis amet, dignissimos ea voluptatem dolore?'} />
-        <FAQItems question={'How can I get started with DogWifTools?'} answer={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus error, dolorum magni hic quaerat quae eum debitis est laborum nesciunt optio eius eos esse corporis amet, dignissimos ea voluptatem dolore?'} />
-        <FAQItems question={'What operating system does DogWifTools support?'} answer={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus error, dolorum magni hic quaerat quae eum debitis est laborum nesciunt optio eius eos esse corporis amet, dignissimos ea voluptatem dolore?'} />
+        <FAQItems question={'What is BullRunner?'} answer={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus error, dolorum magni hic quaerat quae eum debitis est laborum nesciunt optio eius eos esse corporis amet, dignissimos ea voluptatem dolore?'} />
+        <FAQItems question={'How can I get started with BullRunner?'} answer={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus error, dolorum magni hic quaerat quae eum debitis est laborum nesciunt optio eius eos esse corporis amet, dignissimos ea voluptatem dolore?'} />
+        <FAQItems question={'What operating system does BullRunner support?'} answer={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus error, dolorum magni hic quaerat quae eum debitis est laborum nesciunt optio eius eos esse corporis amet, dignissimos ea voluptatem dolore?'} />
 
       </div>
     </div>

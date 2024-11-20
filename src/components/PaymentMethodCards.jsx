@@ -5,12 +5,16 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import SolanaWalletQR from '../assets/SolanaWalletQR.png';
 import pay4 from '../assets/pay4.svg';
+import useClipboard from "react-use-clipboard";
 
-const PaymentMethodCards = () => {
+const PaymentMethodCards = ({qrCode, code}) => {
   const { t } = useTranslation();  // Use the translation hook
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [qr, setQr] = useState(0);
-
+  const [isCopied, setCopied] = useClipboard(code, {
+    // `isCopied` will go back to `false` after 1000ms.
+    successDuration: 1000,
+  });
   const modalFunc = (value) => {
     setOpen(!open);
     setQr(value);
@@ -45,7 +49,7 @@ const PaymentMethodCards = () => {
                     </div>
                     <div className="grid px-6 py-6 lg:grid-cols-2 gap-5">
                       <div className="">
-                        <img src={SolanaWalletQR} className="filter" alt="" />
+                        <img src={qrCode} className="filter" alt="" />
                       </div>
                       <div className="text-[#777F89]">
                         <p className="text-sm">{t('scanQRCode')}</p>
@@ -91,11 +95,16 @@ const PaymentMethodCards = () => {
                             <div className="font-medium text-[13px] text-slate-400">
                               {t('solanaAddress')}
                             </div>
-                            <div className="text-[14px] font-medium text-white">
+                            <div   className="text-[14px] font-medium text-white">
                               <span className="text-slate-400 w-full min-w-full">
-                                Hmfe4yRX4ZrH3CZvV5MhUTDzQGhp5KLsh7N5Y3Xm5UNQ
+                                {code}
                               </span>
                             </div>
+                            <svg onClick={setCopied} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 text-gray-500">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
+</svg>
+<span className="text-sm text-white mt-3">Was it copied? {isCopied ? "Yes! 👍" : "Nope! 👎"}</span>
+
                           </div>
                         </span>
                       </div>

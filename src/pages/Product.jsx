@@ -121,7 +121,7 @@ const Product = () => {
             <p className="text-gray-400 text-center py-2">
               {t('contactInfo')}
             </p>
-            <button className="flex items-center gap-2 mt-8 justify-center px-6 py-2 rounded-full bg-[#818CF8]">
+            <button className="flex items-center gap-2 mt-8 justify-center px-6 py-2 rounded-full bg-[#FF01C0]">
               {t('contactUs')} <FaArrowRightLong />
             </button>
           </div>

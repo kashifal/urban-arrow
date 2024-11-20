@@ -7,11 +7,13 @@ import solana from '../assets/solana.png';
 import { useTranslation } from 'react-i18next'; // Import the useTranslation hook
 
 const SolanaPayment1 = () => {
+  const [btn, setBtn] = useState(0)
   const { t } = useTranslation(); // Initialize translation function
   const [buttonhide, setbuttonhide] = useState(false);
   
-  const setButton = () => {
+  const setButton = (i) => {
     setbuttonhide(true);
+    setBtn(i)
   };
 
   const coins = [
@@ -61,9 +63,9 @@ const SolanaPayment1 = () => {
             <h2 className="pt-5 font-medium">{t('cryptocurrencies')}</h2> {/* Translated text */}
             <p className="text-sm pt-1 font-light text-[#777F89]">{t('send_crypto')}</p> {/* Translated text */}
             <ul className="mt-6 space-y-3">
-              {coins.map((item) => (
+              {coins.map((item,index) => (
                 <li key={item.id}>
-                  <label onClick={setButton} className="block text-white relative">
+                  <label onClick={() => setButton(index)} className="block text-white relative">
                     <input
                       type="radio"
                       name="payment"
@@ -80,7 +82,7 @@ const SolanaPayment1 = () => {
               ))}
             </ul>
             <Link
-              to="/solanaPayment2"
+              to={btn === 0 ? '/eth-payment' : btn === 1 ? '/bnb-payment' : '/sol-payment'}
               className={`mt-10 bg-[#FF00C0] ${buttonhide ? 'block' : 'hidden'} rounded-full py-2 text-center font-medium text-sm w-full hover:opacity-90`}
             >
               {t('update_invoice')} {/* Translated text */}

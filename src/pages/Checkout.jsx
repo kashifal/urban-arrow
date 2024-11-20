@@ -11,7 +11,9 @@ import { useTranslation } from 'react-i18next';  // Import i18n hook
 const Checkout = () => {
   const { t } = useTranslation();  // Initialize the translation function
   const cartItems = useSelector((state) => state.cart.items);
-
+console.log('====================================');
+console.log(cartItems,'cartItems');
+console.log('====================================');
   return (
     <>
       <div className="bg-black text-white min-h-screen">
@@ -20,11 +22,11 @@ const Checkout = () => {
           <h1 className="text-5xl font-semibold">{t('checkout_title')}</h1>
           <p className="py-3">{t('checkout_items', { count: cartItems.length })}</p>
           <div className="gap-5 min-h-[80vh] grid grid-cols-1 md:grid-cols-12">
-            <div className="md:col-span-8 h-fit">
+            <div className="md:col-span-8  h-fit">
               {cartItems.map((item, index) => (
                 <div
                   key={index}
-                  className="border flex sm:flex-row flex-col items-start justify-between border-white/5 bg-white/5 backdrop-blur-3xl sm:p-5 p-2 rounded-xl"
+                  className="border flex m-4 sm:flex-row flex-col items-start justify-between border-white/5 bg-white/5 backdrop-blur-3xl sm:p-5 p-2 rounded-xl"
                 >
                   <div className="flex items-start gap-2">
                     <img
@@ -33,7 +35,7 @@ const Checkout = () => {
                       className="sm:w-36 filter w-28 rounded-xl"
                     />
                     <div className="">
-                      <h1 className="text-sm font-medium">DogWifTools License</h1>
+                      <h1 className="text-sm font-medium">{item.name}</h1>
                       <div className="flex items-start mt-1 gap-1">
                         <svg
                           width="15"
@@ -75,7 +77,7 @@ const Checkout = () => {
                             </linearGradient>
                           </defs>
                         </svg>
-                        <span className="text-sm">15.00000</span>
+                        <span className="text-sm">{item.price}</span>
                         <span className=" text-sm">{t('sol_currency')}</span>
                       </div>
                     </div>
@@ -109,11 +111,11 @@ const Checkout = () => {
                 <div className="pt-12 flex flex-col gap-2">
                   <div className="flex items-center justify-between gap-1">
                     <h4 className="text-sm font-normal">{t('subtotal')}</h4>
-                    <h4 className="text-sm font-normal">15.00 SOL</h4>
+                    <h4 className="text-sm font-normal">{cartItems.reduce((total, product) => total + product.price * product.quantity, 0)} SOL</h4>
                   </div>
                   <div className="flex items-center justify-between gap-1">
                     <h4 className="font-medium">{t('total')}</h4>
-                    <h4 className="font-medium">15.00 SOL</h4>
+                    <h4 className="font-medium">{cartItems.reduce((total, product) => total + product.price * product.quantity, 0)} SOL</h4>
                   </div>
                 </div>
                 <Link to="/solanaPayment1">

@@ -18,8 +18,8 @@ const Shop = () => {
   ];
 
   const handleAddToCart = (product) => {
-    dispatch(addToCart(products[0]));
-    toast.success(`${products[0].name} has been added to the cart!`);
+    dispatch(addToCart(product));
+    toast.success(`${product.name} has been added to the cart!`);
   };
 
   return (
@@ -67,14 +67,16 @@ const Shop = () => {
           </div>
           <div className="grid grid-cols-1 px-4 mt-12 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
             {/* Single Product Card */}
-            <div className="relative bg-[#17161B] rounded-2xl shadow-md overflow-hidden">
+            {
+              products.map((product) => (
+                <div key={product.id} className="relative bg-[#17161B] rounded-2xl shadow-md overflow-hidden">
               {/* Product Image */}
               <div className="relative">
                 <img src={shopItem} alt="DogWifTools License" className="w-full filter h-[201px] object-cover rounded-t-lg" />
                 {/* Cart Actions */}
                 <div className="absolute inset-0 flex justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30">
                   <div className="flex justify-center items-end w-[100%]">
-                    <button onClick={() => handleAddToCart()} className="bg-[#2A2B3F] w-[80vw] text-center items-center justify-center flex h-10 mb-5 mx-5 rounded-full text-sm font-medium text-white hover:bg-[#FF00C0]">
+                    <button onClick={() => handleAddToCart(product)} className="bg-[#2A2B3F] w-[80vw] text-center items-center justify-center flex h-10 mb-5 mx-5 rounded-full text-sm font-medium text-white hover:bg-[#FF00C0]">
                       {t('add_to_cart')}
                     </button>
                   </div>
@@ -83,14 +85,18 @@ const Shop = () => {
               {/* Product Info */}
               <div className="p-4 text-white">
                 <h3 className="text-lg font-semibold leading-6">
-                  {t('product_name')}
+                  {/* {t('product_name')} */}
+                  {product.name}
                 </h3>
                 <div className="flex items-center gap-2 mt-2">
-                  <span className="text-lg font-semibold">{t('price')}: 15.00000</span>
+                  <span className="text-lg font-semibold">{t('price')}: {product.price}</span>
                   <span className="ml-1 text-sm text-gray-400">{t('currency')}</span>
                 </div>
               </div>
             </div>
+              ))
+            }
+            
           </div>
         </div>
         <FooterOther />

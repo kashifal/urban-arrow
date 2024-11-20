@@ -63,7 +63,7 @@ const Footer = () => {
             </div>
             <div className="flex flex-col text-center gap-1 justify-center">
             <a target="_blank" href="/terms" className="text-white/70 underline hover:text-white font-normal text-xs">Terms of Service</a>
-            <p className="font-normal text-xs cursor-context-menu text-white/70  hover:text-white ">© 2024 DogWifTools. All rights reserved.
+            <p className="font-normal text-xs cursor-context-menu text-white/70  hover:text-white ">© 2024 BullRunner. All rights reserved.
 
 </p>
             </div>

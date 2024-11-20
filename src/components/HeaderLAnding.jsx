@@ -78,11 +78,12 @@ const HeaderLAnding = () => {
         <div className=" max-w-[74rem] mx-auto lg:px-0  px-4  py-16">
           <div className="flex flex-col jsutify-center items-center">
             <DiscordLink />
-            <h1 className="sm:text-7xl relative z-50 text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#411C8E] to-[#FF00C0] text-center pt-8 pb-5 font-medium">
+            <h1 className="sm:text-8xl relative z-50 text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#411C8E] to-[#FF00C0] text-center pt-8 pb-5 font-medium">
               All-In-One{" "}
+                
               <span className="opacity-80 text-white">
-                Pump.fun
-                <br /> Software
+              pump  
+                <br /> token maker
               </span>
             </h1>
             <p className="text-sm text-center font-medium">
