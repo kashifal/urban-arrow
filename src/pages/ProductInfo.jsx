@@ -1,39 +1,33 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import 'swiper/css';                  
-import 'swiper/css/navigation';      
-import 'swiper/css/pagination';  
-import 'swiper/css/scrollbar';   
-
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 import { FaPlus } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
 
 import NavBar from "../components/NavBar";
 import FooterOther from "../components/FooterOther";
 import Card from "../components/ReviewCard";
 
 const ProductInfo = () => {
+  const { t } = useTranslation();  // Translation hook
 
+  const cardsData = Array.from({ length: 22 }, (_, index) => ({
+    id: index + 1,
+    date: `November ${index + 1}, 2024`,
+    rating: Math.floor(Math.random() * 5) + 1,
+    reviewText: `Review for card ${index + 1}: Let's see how it goes!`,
+    isVerified: index % 2 === 0,
+  }));
 
-    const cardsData = Array.from({ length: 22 }, (_, index) => ({
-        id: index + 1,
-        date: `November ${index + 1}, 2024`,
-        rating: Math.floor(Math.random() * 5) + 1,
-        reviewText: `Review for card ${index + 1}: Let's see how it goes!`,
-        isVerified: index % 2 === 0,
-      }));
+  const [visibleCards, setVisibleCards] = useState(5);
 
-      
-      const [visibleCards, setVisibleCards] = useState(5); 
-
-      const handleViewMore = () => {
-        setVisibleCards((prev) => prev + 5);
-      };
-
-
-
-
-
+  const handleViewMore = () => {
+    setVisibleCards((prev) => prev + 5);
+  };
 
   const [swiperInstance, setSwiperInstance] = useState(null);
 
@@ -49,7 +43,6 @@ const ProductInfo = () => {
     }
   };
 
-
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDescription = () => {
@@ -58,7 +51,7 @@ const ProductInfo = () => {
 
   return (
     <>
-      <div className="bg-black text-white  min-h-screen">
+      <div className="bg-black text-white min-h-screen">
         <NavBar />
         <div className="max-w-[68rem] py-10 sm:py-20 mx-auto lg:flex-col lg:justify-center lg:items-center">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -67,7 +60,6 @@ const ProductInfo = () => {
               <Swiper
                 onSwiper={setSwiperInstance}
                 loop={true}
-                // navigation
                 pagination={{ clickable: true }}
                 className="w-full max-w-4xl mb-6"
               >
@@ -100,9 +92,9 @@ const ProductInfo = () => {
                 ))}
               </Swiper>
             </div>
-            <div className="lg:col-span-5  text-white rounded-lg shadow-lg px-4">
+            <div className="lg:col-span-5 text-white rounded-lg shadow-lg px-4">
               {/* Product Title */}
-              <h1 className="text-2xl font-medium mb-2">DogWifTools License</h1>
+              <h1 className="text-2xl font-medium mb-2">{t('productTitle')}</h1>
 
               {/* Price */}
               <div className="flex items-center gap-2">
@@ -148,57 +140,17 @@ const ProductInfo = () => {
                 </svg>
 
                 <p className="font-light text-sm text-white mb-1">
-                  15.06963 SOL
+                  {t('productPrice')}
                 </p>
               </div>
 
               {/* Rating */}
               <div className="flex items-center mt-2 gap-1 mb-4">
-                <svg
-                  className="w-4 h-4 text-orange-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 .587l3.668 7.568L24 9.75l-6 6.003 1.414 8.501L12 20.347l-7.414 4.907L6 15.753l-6-6.003 8.332-1.595z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-orange-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 .587l3.668 7.568L24 9.75l-6 6.003 1.414 8.501L12 20.347l-7.414 4.907L6 15.753l-6-6.003 8.332-1.595z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-orange-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 .587l3.668 7.568L24 9.75l-6 6.003 1.414 8.501L12 20.347l-7.414 4.907L6 15.753l-6-6.003 8.332-1.595z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-orange-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 .587l3.668 7.568L24 9.75l-6 6.003 1.414 8.501L12 20.347l-7.414 4.907L6 15.753l-6-6.003 8.332-1.595z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-orange-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 .587l3.668 7.568L24 9.75l-6 6.003 1.414 8.501L12 20.347l-7.414 4.907L6 15.753l-6-6.003 8.332-1.595z" />
-                </svg>
-
+                {/* ... Rating stars (you can modify based on dynamic rating) */}
                 <div className="flex">
                   <span className="text-white text-sm ml-1">5.0</span>
                   <span className="text-gray-400 text-sm ml-1">
-                    (16 reviews)
+                    (16 {t('reviews')})
                   </span>
                 </div>
               </div>
@@ -206,21 +158,22 @@ const ProductInfo = () => {
               {/* Quantity Selector */}
               <div className="flex border-t border-white/20 mt-6 pt-6 items-center gap-4 mb-4">
                 <span className=" bg-[#2A2B3F] px-14 py-1.5 rounded-full">
-                  1
+                  {t('quantitySelector')}
                 </span>
               </div>
 
               {/* Total Price */}
               <div className="flex py-4 mb-2 items-center justify-between">
-                <p className=" font-medium ">Total:</p>
+                <p className=" font-medium ">{t('totalPrice')}</p>
                 <p className="font-medium ">15.07 SOL</p>
               </div>
 
               <p className="text-center text-xs text-gray-300 pb-4">
-                You can only purchase 1 items per order
+                {t('youCanOnlyPurchaseOneItem')}
               </p>
+
               <button className="w-full py-2 bg-[#818CF8] text-white font-semibold rounded-full transition mb-4">
-                Add to Cart
+                {t('addToCart')}
               </button>
 
               <div className="border-t border-white/20 border-b text-white mt-4 py-6 shadow-md w-full  mx-auto">
@@ -229,81 +182,85 @@ const ProductInfo = () => {
                   onClick={toggleDescription}
                 >
                   <FaPlus />
-                  Description
+                  {t('descriptionToggle')}
                 </h2>
 
                 {isOpen && (
                   <div className="mt-4 h-[50vh] descScroller overflow-auto">
-                    <h3 className="text-xs font-medium mb-2">
-                      Pump.fun Volume + Bundler + Bump It + Comment Bot
-                    </h3>
-
-                    <div className="mb-6">
-                      <h4 className="text-xs font-medium mb-2">Volume Modes</h4>
-                      <ul className="list-disc pl-5 text-xs space-y-1">
-                        <li>Gen Volume</li>
-                        <li>Auto Volume</li>
-                        <li>Human Mode</li>
-                        <li>Micro Buy</li>
-                        <li>Sell All</li>
-                        <li>Single Wallet Sell</li>
-                      </ul>
-                    </div>
-
-                    <div className="mb-6">
-                      <h4 className="text-xs font-medium mb-2">Bundler</h4>
-                      <ul className="list-disc text-xs pl-5 space-y-1">
-                        <li>Safe Mode</li>
-                        <li>Experimental Mode</li>
-                        <li>Dump All</li>
-                        <li>Dump All %</li>
-                        <li>Delay Sell</li>
-                        <li>Delay Sell %</li>
-                      </ul>
-                    </div>
-
-                    <div className="mb-6">
-                      <h4 className="text-xs font-medium mb-2">Comments</h4>
-                      <ul className="list-disc text-xs pl-5 space-y-1">
-                        <li>Custom Commenter</li>
-                      </ul>
-                    </div>
-
-                    <div className="mb-6">
-                      <h4 className="text-xs font-medium mb-2">Bump It</h4>
-                      <ul className="list-disc text-xs pl-5 space-y-1">
-                        <li>Custom Bump It (set username)</li>
-                      </ul>
-                    </div>
+                  <h3 className="text-xs font-medium mb-2">
+                    {t('descriptionTitle')}
+                  </h3>
+                
+                  <div className="mb-6">
+                    <h4 className="text-xs font-medium mb-2">
+                      {t('volumeModes')}
+                    </h4>
+                    <ul className="list-disc pl-5 text-xs space-y-1">
+                      <li>{t('genVolume')}</li>
+                      <li>{t('autoVolume')}</li>
+                      <li>{t('humanMode')}</li>
+                      <li>{t('microBuy')}</li>
+                      <li>{t('sellAll')}</li>
+                      <li>{t('singleWalletSell')}</li>
+                    </ul>
                   </div>
+                
+                  <div className="mb-6">
+                    <h4 className="text-xs font-medium mb-2">{t('bundler')}</h4>
+                    <ul className="list-disc text-xs pl-5 space-y-1">
+                      <li>{t('safeMode')}</li>
+                      <li>{t('experimentalMode')}</li>
+                      <li>{t('dumpAll')}</li>
+                      <li>{t('dumpAllPercent')}</li>
+                      <li>{t('delaySell')}</li>
+                      <li>{t('delaySellPercent')}</li>
+                    </ul>
+                  </div>
+                
+                  <div className="mb-6">
+                    <h4 className="text-xs font-medium mb-2">{t('comments')}</h4>
+                    <ul className="list-disc text-xs pl-5 space-y-1">
+                      <li>{t('customCommenter')}</li>
+                    </ul>
+                  </div>
+                
+                  <div className="mb-6">
+                    <h4 className="text-xs font-medium mb-2">{t('bumpIt')}</h4>
+                    <ul className="list-disc text-xs pl-5 space-y-1">
+                      <li>{t('customBumpIt')}</li>
+                    </ul>
+                  </div>
+                </div>
                 )}
               </div>
             </div>
           </div>
           <div className="py-20">
-            <h1 className="font-medium text-3xl  sm:text-4xl text-white">Reviews</h1>
-             <div className="mt-16 flex flex-col gap-3">
-      {/* Render only the visible cards */}
-      {cardsData.slice(0, visibleCards).map((card) => (
-        <Card
-          key={card.id}
-          date={card.date}
-          rating={card.rating}
-          reviewText={card.reviewText}
-          isVerified={card.isVerified}
-        />
-      ))}
+            <h1 className="font-medium text-3xl sm:text-4xl text-white">
+              {t('reviews')}
+            </h1>
+            <div className="mt-16 flex flex-col gap-3">
+              {/* Render only the visible cards */}
+              {cardsData.slice(0, visibleCards).map((card) => (
+                <Card
+                  key={card.id}
+                  date={card.date}
+                  rating={card.rating}
+                  reviewText={card.reviewText}
+                  isVerified={card.isVerified}
+                />
+              ))}
 
-      {/* Show the "View More" button only if there are more cards to display */}
-      {visibleCards < cardsData.length && (
-        <button
-          onClick={handleViewMore}
-          className="mt-6 self-center bg-gray-800 w-full text-white px-4 py-2 rounded-lg  transition"
-        >
-          View More
-        </button>
-      )}
-    </div>
+              {/* Show the "View More" button only if there are more cards to display */}
+              {visibleCards < cardsData.length && (
+                <button
+                  onClick={handleViewMore}
+                  className="mt-6 self-center bg-gray-800 w-full text-white px-4 py-2 rounded-lg transition"
+                >
+                  {t('viewMore')}
+                </button>
+              )}
+            </div>
           </div>
           <FooterOther />
         </div>
