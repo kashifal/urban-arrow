@@ -1,11 +1,13 @@
 import React from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 import NavBar from "../components/NavBar";
 import FooterOther from "../components/FooterOther";
-import { FaArrowRightLong } from "react-icons/fa6";
 import Card from "../components/ReviewCard";
-import shopItem from '../assets/shopitem.avif'
+import shopItem from '../assets/shopitem.avif';
 
 const Product = () => {
+  const { t } = useTranslation();  // Use the translation hook
   const cardsData = Array.from({ length: 3 }, (_, index) => ({
     id: index + 1,
     date: `November ${index + 1}, 2024`,
@@ -13,15 +15,16 @@ const Product = () => {
     reviewText: `Review for card ${index + 1}: Let's see how it goes!`,
     isVerified: index % 2 === 0,
   }));
+
   return (
     <>
-      <div className="bg-black text-white  min-h-screen">
+      <div className="bg-black text-white min-h-screen">
         <NavBar />
         <div className="max-w-[68rem] px-4 pt-8 py-10 mx-auto lg:flex-col lg:justify-center lg:items-center">
           <div className="flex flex-wrap items-center pb-14 justify-between gap-3">
-            <h1 className="sm:text-4xl txet-3xl font-semibold">Our Products</h1>
+            <h1 className="sm:text-4xl text-3xl font-semibold">{t('ourProducts')}</h1>
             <button className="flex items-center gap-3 border border-white/20 px-5 py-2 rounded-full">
-              View All Products
+              {t('viewAllProducts')}
               <FaArrowRightLong />
             </button>
           </div>
@@ -30,24 +33,22 @@ const Product = () => {
             <div className="relative">
               <img
                 src={shopItem}
-                alt="DogWifTools License"
+                alt={t('productAlt')}
                 className="w-full filter h-[201px] object-cover rounded-t-lg"
               />
               {/* Cart Actions */}
-              <div className="absolute inset-0  flex  justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30">
-                <div className="flex  justify-center items-end   w-[100%]  ">
+              <div className="absolute inset-0 flex justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30">
+                <div className="flex justify-center items-end w-[100%]">
                   {/* Add to Cart */}
-                  <button className="bg-[#2A2B3F] w-[80vw] h-10 mb-5 mx-5 rounded-full  text-sm font-medium text-white  hover:bg-indigo-800">
-                    Add to Cart
+                  <button className="bg-[#2A2B3F] w-[80vw] h-10 mb-5 mx-5 rounded-full text-sm font-medium text-white hover:bg-indigo-800">
+                    {t('addToCart')}
                   </button>
                 </div>
               </div>
             </div>
             {/* Product Info */}
             <div className="p-4 text-white">
-              <h3 className="text-lg font-semibold leading-6">
-                DogWifTools License
-              </h3>
+              <h3 className="text-lg font-semibold leading-6">{t('productName')}</h3>
               {/* Price */}
               <div className="flex items-center gap-2 mt-2">
                 <svg
@@ -98,9 +99,9 @@ const Product = () => {
           </div>
 
           <div className="flex flex-wrap items-center pt-20 pb-14 justify-between gap-3">
-            <h1 className="sm:text-4xl txet-3xl font-semibold">Reviews</h1>
+            <h1 className="sm:text-4xl text-3xl font-semibold">{t('reviews')}</h1>
             <button className="flex items-center gap-3 border border-white/20 px-5 py-2 rounded-full">
-              View All Reviews
+              {t('viewAllReviews')}
               <FaArrowRightLong />
             </button>
           </div>
@@ -116,13 +117,12 @@ const Product = () => {
             ))}
           </div>
           <div className="rounded-xl px-4 mb-40 flex flex-col justify-center items-center bg-zinc-900 py-20 w-full">
-            <h1 className="md:text-4xl font-semibold text-3xl">Get in Touch</h1>
+            <h1 className="md:text-4xl font-semibold text-3xl">{t('getInTouch')}</h1>
             <p className="text-gray-400 text-center py-2">
-              Got a question or need some help? Get in touch. We'd love to hear
-              from you.
+              {t('contactInfo')}
             </p>
             <button className="flex items-center gap-2 mt-8 justify-center px-6 py-2 rounded-full bg-[#818CF8]">
-              Contact Us <FaArrowRightLong />
+              {t('contactUs')} <FaArrowRightLong />
             </button>
           </div>
           <FooterOther />

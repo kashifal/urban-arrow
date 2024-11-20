@@ -41,8 +41,9 @@ const App = () => {
       <p>{t('hello')}</p>
       
       {/* Language Switcher */}
-      <button onClick={() => changeLanguage('en')}>English</button>
-      <button onClick={() => changeLanguage('es')}>Español</button>
+      <button onClick={() => changeLanguage('en')} className="cursor-pointer">English</button>
+      <button onClick={() => changeLanguage('es')} className="cursor-pointer">Español</button>
+      <button onClick={() => changeLanguage('fr')} className="cursor-pointer">Freanch</button>
     </div>
       <Routes>
         <Route path="/" element={<Landing />} />
