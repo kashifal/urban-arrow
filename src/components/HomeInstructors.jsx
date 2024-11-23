@@ -38,7 +38,7 @@ const HomeInstructors = () => {
   };
 
   return (
-    <div className=' relative py-20 max-w-7xl mx-auto md:px-6 px-4'>
+    <div className=' relative z-[4] py-20 max-w-7xl mx-auto md:px-6 px-4'>
       <div className="flex items-center justify-between gap-6 flex-wrap">
         <div className="flex flex-col sm:w-[80%] gap-6">
           <div className="h-[2px] w-10 bg-[#D7D7D7]"></div>

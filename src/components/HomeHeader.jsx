@@ -3,6 +3,7 @@ import Circle from '../assets/homeheadercircle.png'
 import BottomCircle from '../assets/bottomCircle.png'
 import CenterCircle from '../assets/circles.png'
 import { IoArrowDownOutline } from "react-icons/io5";
+import img from '../assets/headerImg.png'
 
 const HomeHeader = () => {
   return (
@@ -30,8 +31,8 @@ const HomeHeader = () => {
 
        </div>
        </div>
-       <div className="absolute w-[40%] bottom-0 right-0">
-        <img src=" yuijo" alt="PIC HERE" />
+       <div className="absolute  bottom-0 right-0">
+        <img src={img} className='w-[50%]' alt="PIC HERE" />
        </div>
     </div>
   )

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { Routes, Route } from "react-router-dom"; // Import Routes and Route
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
@@ -9,16 +10,14 @@ import Home from "./pages/Home";
 const App = () => {
   return (
     <>
-     <NavBar />
-     {/* <Contact /> */}
-     {/* <Profile /> */}
-     {/* <CourseList /> */}
-     <Home />
-     <Footer />
-    
-      {/* <Routes>
-      
-      </Routes> */}
+      <NavBar />
+      <Routes> {/* Wrap your Routes with Routes component */}
+        <Route path="/" element={<Home />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/courseList" element={<CourseList />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
     </>
   );
 };
