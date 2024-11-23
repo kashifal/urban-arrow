@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
 import Profile from "./pages/Profile";
 import CourseList from "./pages/CourseList";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
@@ -11,8 +12,8 @@ const App = () => {
      <NavBar />
      {/* <Contact /> */}
      {/* <Profile /> */}
-     <CourseList />
-
+     {/* <CourseList /> */}
+     <Home />
      <Footer />
     
       {/* <Routes>
