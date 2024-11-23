@@ -11,7 +11,7 @@ const App = () => {
   return (
     <>
       <NavBar />
-      <Routes> {/* Wrap your Routes with Routes component */}
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/courseList" element={<CourseList />} />
