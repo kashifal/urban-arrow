@@ -5,6 +5,12 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../redux/cartSlice';
+import { toast } from 'react-toastify';
+// import { useTranslation } from 'react-i18next'; // Import the i18n hook
+// import shopItem from '../assets/shopitem.avif';
+
 import { FaPlus } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 
@@ -15,14 +21,27 @@ import shopItem from '../assets/shopitem.avif'
 
 const ProductInfo = () => {
   const { t } = useTranslation();  // Translation hook
-
-  const cardsData = Array.from({ length: 22 }, (_, index) => ({
-    id: index + 1,
-    date: `November ${index + 1}, 2024`,
-    rating: Math.floor(Math.random() * 5) + 1,
-    reviewText: `Review for card ${index + 1}: Let's see how it goes!`,
-    isVerified: index % 2 === 0,
-  }));
+  const reviews = [
+    { id: 1, date: "November 1, 2024", rating: 5, reviewText: "Absolutely fantastic! This product exceeded all my expectations. Highly recommend it to everyone!", isVerified: true },
+    { id: 2, date: "November 2, 2024", rating: 4, reviewText: "A great purchase! The quality is top-notch, and it’s super easy to use.", isVerified: false },
+    { id: 3, date: "November 3, 2024", rating: 5, reviewText: "This is hands down the best product I’ve used this year. Worth every penny!", isVerified: true },
+    { id: 4, date: "November 4, 2024", rating: 5, reviewText: "Amazing product! The design is sleek, and it performs even better than advertised.", isVerified: false },
+    { id: 5, date: "November 5, 2024", rating: 4, reviewText: "Really impressed with the performance and reliability. Would definitely buy again!", isVerified: true },
+    { id: 6, date: "November 6, 2024", rating: 5, reviewText: "Five stars! This product is a game-changer. Perfect for daily use.", isVerified: false },
+    { id: 7, date: "November 7, 2024", rating: 5, reviewText: "The product quality is outstanding, and the customer service was great too!", isVerified: true },
+    { id: 8, date: "November 8, 2024", rating: 4, reviewText: "I can’t believe how well this works. Great value for the price.", isVerified: false },
+    { id: 9, date: "November 9, 2024", rating: 5, reviewText: "Fantastic! The attention to detail in this product is evident. Love it!", isVerified: true },
+    { id: 10, date: "November 10, 2024", rating: 4, reviewText: "Exceeded my expectations! Works flawlessly and looks amazing too.", isVerified: false },
+    { id: 11, date: "November 11, 2024", rating: 5, reviewText: "This product has made my life so much easier. Highly recommend it to everyone.", isVerified: true },
+    { id: 12, date: "November 12, 2024", rating: 5, reviewText: "Top-notch quality and incredible performance. A must-have for anyone!", isVerified: false },
+    { id: 13, date: "November 13, 2024", rating: 4, reviewText: "Couldn’t be happier with this purchase. It’s exactly what I needed.", isVerified: true },
+    { id: 14, date: "November 14, 2024", rating: 5, reviewText: "This is my favorite product so far. The quality and functionality are unmatched.", isVerified: false },
+    { id: 15, date: "November 15, 2024", rating: 5, reviewText: "Incredible value! The product delivers on every promise. Love it!", isVerified: true },
+    { id: 16, date: "November 16, 2024", rating: 4, reviewText: "The build quality is superb, and it works perfectly. 10/10 would recommend!", isVerified: false },
+    { id: 17, date: "November 17, 2024", rating: 5, reviewText: "One of the best purchases I’ve ever made. Highly functional and durable.", isVerified: true },
+  ];
+  
+  const cardsData = reviews;
 
   const [visibleCards, setVisibleCards] = useState(5);
 
@@ -44,12 +63,23 @@ const ProductInfo = () => {
     }
   };
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const toggleDescription = () => {
     setIsOpen(!isOpen);
   };
 
+
+  const dispatch = useDispatch();
+ 
+  const products = [
+    { id: 1, name: 'BullRunner License', price: 15.0000 }, 
+  ];
+
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(products[0]));
+    toast.success(`${products[0].name} has been added to the cart!`);
+  };
   return (
     <>
       <div className="bg-black text-white min-h-screen">
@@ -95,7 +125,7 @@ const ProductInfo = () => {
             </div>
             <div className="lg:col-span-5 text-white rounded-lg shadow-lg px-4">
               {/* Product Title */}
-              <h1 className="text-2xl font-medium mb-2">{t('productTitle')}</h1>
+              <h1 className="text-2xl font-medium mb-2">{products[0].name}</h1>
 
               {/* Price */}
               <div className="flex items-center gap-2">
@@ -141,7 +171,7 @@ const ProductInfo = () => {
                 </svg>
 
                 <p className="font-light text-sm text-white mb-1">
-                  {t('productPrice')}
+                  {products[0].price}
                 </p>
               </div>
 
@@ -151,7 +181,7 @@ const ProductInfo = () => {
                 <div className="flex">
                   <span className="text-white text-sm ml-1">5.0</span>
                   <span className="text-gray-400 text-sm ml-1">
-                    (16 {t('reviews')})
+                    (17 {t('reviews')})
                   </span>
                 </div>
               </div>
@@ -166,14 +196,14 @@ const ProductInfo = () => {
               {/* Total Price */}
               <div className="flex py-4 mb-2 items-center justify-between">
                 <p className=" font-medium ">{t('totalPrice')}</p>
-                <p className="font-medium ">15.07 SOL</p>
+                <p className="font-medium ">{products[0].price} SOL</p>
               </div>
 
               <p className="text-center text-xs text-gray-300 pb-4">
                 {t('youCanOnlyPurchaseOneItem')}
               </p>
 
-              <button className="w-full py-2 bg-[#818CF8] text-white font-semibold rounded-full transition mb-4">
+              <button onClick={() => handleAddToCart()} className="w-full py-2 bg-[#FF01C0] text-white font-semibold rounded-full transition mb-4">
                 {t('addToCart')}
               </button>
 
