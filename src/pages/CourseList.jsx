@@ -13,7 +13,7 @@ const CourseList = () => {
           <h1 className="text-[#227179] text-4xl sm:text-6xl">Course List 1</h1>
         </div>
       </div>
-      <div className="grid max-w-7xl mx-auto px-6 pt-10 pb-20 grid-cols-4 gap-6">
+      <div className="grid max-w-7xl mx-auto px-6 pt-10 pb-20 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {Array.from({ length: 20 }).map((_, index) => (
           <YogaCards key={index} />
         ))}
