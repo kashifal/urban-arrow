@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import LinkItem from "./LinkItem";
 import { RiAccountCircleLine } from "react-icons/ri";
 import { FiMenu, FiX } from "react-icons/fi"; // Mobile toggle icons
@@ -11,21 +11,36 @@ const Navbar = () => {
   const links = [
     {
       label: "Home",
-      href: "/",
+      href: "/", 
     },
     {
       label: "Course",
-      href: "/courseList",
+      href: "/courseList", 
     },
     {
       label: "Profile",
-      href: "/profile",
+      href: "/profile", 
     },
     {
       label: "Contact",
-      href: "/contact",
+      href: "/contact", 
     },
   ];
+
+  const drawerRef = useRef(null); 
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (drawerRef.current && !drawerRef.current.contains(event.target)) {
+        setIsMobileMenuOpen(false); 
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside); 
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside); 
+    };
+  }, []);
 
   const handleMouseLeave = () => {
     const homeLink = document.querySelector('.home-link');
@@ -53,8 +68,9 @@ const Navbar = () => {
 
           {/* Links for Desktop and Mobile */}
           <div
+            ref={drawerRef} // Attach the ref to the drawer
             className={`lg:flex lg:items-center lg:gap-6 lg:static lg:w-auto lg:h-auto lg:bg-transparent 
-            absolute top-24 left-0 w-full h-screen bg-white z-20 transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? "translate-x-0 bg-slate-100 top-0" : "-translate-x-full"
+            absolute top-16 left-0 w-full h-screen bg-white z-20 transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? "translate-x-0 bg-slate-100 top-0" : "-translate-x-full"
               } lg:transform-none`}
           >
             <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-6 px-6 py-4 lg:p-0">
@@ -64,6 +80,7 @@ const Navbar = () => {
                     label={link.label}
                     href={link.href}  // Pass href to LinkItem
                     setDotPosition={setDotPosition}
+                    onClick={() => setIsMobileMenuOpen(false)} // Close the drawer on link click
                   />
                 </div>
               ))}

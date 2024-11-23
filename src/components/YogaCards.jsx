@@ -9,7 +9,7 @@ const YogaCards = () => {
     <img
       src={img}
       alt="Meditation"
-      className=" h-96 object-cover   overflow-hidden transform transition duration-500 group-hover:scale-105"
+      className=" h-96 object-cover w-full  overflow-hidden transform transition duration-500 group-hover:scale-105"
     />
   </div>
   <div className="p-4 flex justify-between">

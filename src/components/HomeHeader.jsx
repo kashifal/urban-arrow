@@ -7,7 +7,7 @@ import img from '../assets/headerImg.png'
 
 const HomeHeader = () => {
   return (
-    <div className='bg-[#DBE8E7] absolute top-0 pt-20 md:pt-40 h-full   w-[100%] '>
+    <div className='bg-[#DBE8E7] absolute  z-[2] top-0 pt-20 md:pt-40 h-full   w-[100%] '>
        <div className="overflow-hidden z-[2] h-fit w-full">
        <div className="absolute -top-[45%] overflow-hidden -right-[18%] ">
             <img src={Circle} alt="" />
