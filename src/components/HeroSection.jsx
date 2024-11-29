@@ -33,7 +33,7 @@ function HeroSection() {
         <p className="text-babse text-white font-light">
         Our wide range of cargo bikes offers an easy and sustainable solution for every purpose. Whether it is you are taking your precious load from A to B or transporting important packages. Whatever moves you, we’ve got you covered.
         </p>
-        <button id="myBtn" onClick={handlePause}>
+        <button id="myBtn" className="bg-[#BEEB82] hover:opacity-90 mt-7 px-5 py-3 rounded-full" onClick={handlePause}>
           Explore all bikes
         </button>
       </div>

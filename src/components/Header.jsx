@@ -1,6 +1,4 @@
 import React from 'react'
-import Navbar from './NavBar'
-import bgImg from '../assets/headerBG.png'
 
 const Header = ({ title, subtitle, bgHeight = "100vh", textHeight = "100vh" }) => {
   return (

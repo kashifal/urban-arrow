@@ -1,16 +1,12 @@
 import React from "react";
-import HomeHeader from "../components/HomeHeader";
-import HomeInstructions from "../components/HomeInstructions";
-import Footer from "../components/Footer";
-import HomeInstructors from "../components/HomeInstructors";
-import Testimonial from "../components/Testimonial";
-import OnlineClasses from "../components/OnlineClasses";
-import Newlesster from "../components/Newlesster";
-import Foundation from "../components/Foundation";
-import Articles from "../components/Articles";
-import Logos from "../components/Logos";
 import HeroSection from "../components/HeroSection";
 import Header from "../components/Header.jsx";
+import TryIt from "../components/TryIt";
+import MeetFleet from "../components/MeetFleet";
+import Ride from "../components/Ride";
+import Experience from "../components/Experience";
+import Stories from "../components/Stories";
+
 const Home = () => {
   return (
     <>
@@ -18,6 +14,11 @@ const Home = () => {
         <Header />
         <HeroSection />
       </div>
+      <TryIt />
+      <MeetFleet />
+      <Ride />
+      <Experience />
+      <Stories />
     </>
   );
 };
