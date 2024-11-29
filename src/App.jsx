@@ -7,10 +7,11 @@ import Profile from "./pages/Profile";
 import CourseList from "./pages/CourseList";
 import Home from "./pages/Home";
 
+
 const App = () => {
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />

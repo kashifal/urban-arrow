@@ -2,6 +2,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+  font-family: 'heading';
+  src: url('./assets/fonts/CooperLightBT.woff2') format('woff2'); 
+}
+
+@font-face {
+  font-family: 'regular';
+  src: url('./assets/fonts/regular.woff2') format('woff2'); 
+}
+
+@font-face {
+  font-family: 'nav';
+  src: url('./assets/fonts/aeonik-bold.woff2') format('woff2'); 
+}
+
+
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "heading", sans-serif;
+}
+
+p{
+  font-family: "regular", sans-serif;
+
+}
+
+.link {
+  font-family: "regular", sans-serif;
+
 }
