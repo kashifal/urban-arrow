@@ -2,9 +2,9 @@ import React from 'react'
 
 const TryIt = () => {
   return (
-    <div className='bg-white  py-48 max-w-[72rem] xl:max-w-[84%] lg:px-0 px-6 grid lg:grid-cols-2 gap-4 mx-auto'>
+    <div className='bg-white text-[#1A1919] py-48 max-w-[72rem] xl:max-w-[86%] xl:px-0 px-6 grid lg:grid-cols-2 gap-4 mx-auto'>
        
-        <h1 className="text-[7vw] md:text-[4.9vw]  xl:text-[71.3px]  leading-none ">Try it once,<br />
+        <h1 className="text-[7vw] md:text-[4.9vw]  xl:text-[68px]  leading-none ">Try it once,<br />
         love it forever.</h1>
         <div className="">
            <div className="lg:w-[90%] text-black flex flex-col gap-7 font-medium mt-2 ml-auto">

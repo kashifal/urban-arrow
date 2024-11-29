@@ -6,6 +6,9 @@ import MeetFleet from "../components/MeetFleet";
 import Ride from "../components/Ride";
 import Experience from "../components/Experience";
 import Stories from "../components/Stories";
+import SunCover from "../components/SunCover";
+import Discover from "../components/Discover";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -19,6 +22,9 @@ const Home = () => {
       <Ride />
       <Experience />
       <Stories />
+      <SunCover />
+      <Discover />
+      <Footer />
     </>
   );
 };

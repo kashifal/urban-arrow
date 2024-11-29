@@ -2,7 +2,7 @@ import React from 'react';
 
 const MeetFleetCard = ({ MainImg, heading, hasGradient }) => {
   return (
-    <a href="#" className="sm:w-[37vw] w-full 2xl:w-[33%] group cursor-pointer h-full overflow-hidden">
+    <a href="#" className="lg:w-[37vw] w-[100vw] 2xl:w-[33%] group cursor-pointer h-full overflow-hidden">
       <div className="h-[60vh] sm:h-[80vw] xl:h-[75vh] w-full relative flex flex-col justify-between overflow-hidden rounded-2xl">
         {/* Image Layer */}
         <div className="w-full h-full absolute top-0 left-0 z-[2]">
@@ -15,7 +15,7 @@ const MeetFleetCard = ({ MainImg, heading, hasGradient }) => {
 
         {/* Text Layer */}
         <div
-          className="px-6 text-[2.5vw] text-white xl:text-4xl leading-none pb-24 pt-6 z-[4] relative"
+          className="px-6 text-[4vw] md:text-[2.5vw] text-white xl:text-4xl leading-none pb-24 pt-6 z-[4] relative"
           style={
             hasGradient
               ? {
