@@ -13,7 +13,7 @@ import Splide from "../components/Splide";
 const Home = () => {
   return (
     <>
-      <div className="md:min-h-screen relative overflow-x-hidden w-fit">
+      <div className="lg:min-h-screen relative overflow-x-hidden w-fit">
         <Header />
         <HeroSection />
       </div>

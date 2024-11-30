@@ -129,7 +129,7 @@ const Stories = () => {
                         {story.title}
                         <br className="xl:block hidden" /> {story.subtitle}
                       </h1>
-                      <button className="px-[18px] py-3 rounded-full mt-2 bg-black text-white">
+                      <button className="px-[18px]  button-font py-3 rounded-full mt-2 bg-black text-white">
                         {story.buttonText}
                       </button>
                     </div>
@@ -141,7 +141,7 @@ const Stories = () => {
         </div>
 
         <div className="mt-14 flex flex-wrap justify-between md:justify-end">
-          <button className="px-5 py-3 rounded-full mt-2 border-black border hover:bg-black text-black hover:text-white">
+          <button className="px-5  button-font py-3 rounded-full mt-2 border-black border hover:bg-black text-black hover:text-white">
             All stories
           </button>
           <div className="md:hidden flex items-center gap-1.5">

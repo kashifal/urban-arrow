@@ -15,7 +15,7 @@ const Experience = () => {
           which bike suits you and your family <br />
           best.
         </p>
-        <button className="bg-[#BEE6D7] w-fit px-5 hover:bg-[#b0d0c4] py-3.5 rounded-full text-black font-medium">
+        <button className="bg-[#BEE6D7]  button-font w-fit px-5 hover:bg-[#b0d0c4] py-3.5 rounded-full text-black font-medium">
           Find a dealer
         </button>
       </div>

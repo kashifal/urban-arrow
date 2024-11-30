@@ -47,24 +47,24 @@ const Header = ({
                 ></path>
               </svg>
             </div>
-            <div className=" font-medium sm:mx-0 mx-auto overflow-hidden shadow-lg cursor-pointer z-50  bg-white rounded-full flex items-center justify-center">
+            <div className="button-font font-medium sm:mx-0 mx-auto overflow-hidden shadow-lg cursor-pointer z-50  bg-white rounded-full flex items-center justify-center">
               <div className="flex items-center px-4 py-1 hover:bg-[#C8C8B9] hover:bg-opacity-30  gap-3">
                 <img
                   src="https://urbanarrow.com/app/uploads/flags/flag-na.svg"
                   alt=""
                 />
                 <div className="text-sm">
-                  <h1 className="">English (US)</h1>
-                  <p className="text-[#C8C8B9]">North America</p>
+                  <h1 className="button-font">English (US)</h1>
+                  <p className="text-[#C8C8B9] button-font">North America</p>
                 </div>
               </div>
-              <div className="px-4 py-3.5 border-l text-sm  hover:bg-[#C8C8B9] hover:bg-opacity-30  h-full border-[#C8C8B9]">
+              <div className="px-4 button-font py-3.5 border-l text-sm  hover:bg-[#C8C8B9] hover:bg-opacity-30  h-full border-[#C8C8B9]">
                 USD US $
               </div>
             </div>
           </div>
           <div className="flex  flex-col mx-auto items-center justify-center h-full w-full sm:-mt-20">
-            <div className=" grid grid-cols-2 md:whitespace-nowrap md:grid-cols-4 xl:grid-cols-5 items-start justify-between xl:max-w-[90%] w-full mx-auto max-w-[80rem]  gap-20">
+            <div className=" grid grid-cols-2  md:whitespace-nowrap md:grid-cols-4 xl:grid-cols-5 items-start justify-between xl:max-w-[90%] w-full mx-auto max-w-[80rem]  gap-20">
               <div className="flex justify-between items-start gap-12 flex-wrap">
                 <div className="flex flex-col gap-1">
                   <a href="#" className="text-[25px] block hover:underline">
@@ -82,10 +82,10 @@ const Header = ({
               <div className="">
                 <h4 className="text-[#9A9A94] text-2xl">Products</h4>
                 <div className="flex flex-col mt-4 gap-5">
-                  <a href="#" className="block hover:underline">
+                  <a href="#" className="block button-font hover:underline">
                     Family
                   </a>
-                  <a href="#" className="block hover:underline">
+                  <a href="#" className="block button-font hover:underline">
                     Accessories
                   </a>
                 </div>
@@ -93,13 +93,13 @@ const Header = ({
               <div className="">
                 <h4 className="text-[#9A9A94] text-2xl">About us</h4>
                 <div className="flex flex-col mt-4 gap-5">
-                  <a href="#" className="block hover:underline">
+                  <a href="#" className="block button-font hover:underline">
                     About us
                   </a>
-                  <a href="#" className="block hover:underline">
+                  <a href="#" className="block button-font hover:underline">
                     Community
                   </a>
-                  <a href="#" className="block hover:underline">
+                  <a href="#" className="block button-font hover:underline">
                     Careers
                   </a>
                 </div>
@@ -109,7 +109,7 @@ const Header = ({
                 <div className="flex flex-col mt-4 gap-5">
                   <a
                     href="#"
-                    className="flex items-center gap-[1px] hover:underline"
+                    className="flex items-center button-font gap-[1px] hover:underline"
                   >
                     Service Center
                     <svg
@@ -128,13 +128,13 @@ const Header = ({
                       />
                     </svg>
                   </a>
-                  <a href="#" className="block hover:underline">
+                  <a href="#" className="block button-font hover:underline">
                     Reviews
                   </a>
-                  <a href="#" className="block hover:underline">
+                  <a href="#" className="block button-font hover:underline">
                     Documents
                   </a>
-                  <a href="#" className="block hover:underline">
+                  <a href="#" className="block button-font hover:underline">
                     Contact
                   </a>
                 </div>
@@ -142,12 +142,12 @@ const Header = ({
               <div className="">
                 <h4 className="text-[#9A9A94] text-2xl">Dealers</h4>
                 <div className="flex flex-col mt-4 gap-5">
-                  <a href="#" className="block hover:underline">
+                  <a href="#" className="block button-font hover:underline">
                     Become a dealer
                   </a>
                   <a
                     href="#"
-                    className="flex items-center gap-[1px] hover:underline"
+                    className="flex button-font items-center gap-[1px] hover:underline"
                   >
                     Dealer Portal
                     <svg

@@ -136,7 +136,7 @@ const Discover = () => {
                 <div className="px-6 text-center pb-8 pt-14">
                   <h1 className="font-medium py-3 text-[28px]">{card.title}</h1>
                   <h4 className="font-medium py-2">{card.description}</h4>
-                  <button className="px-5 py-3.5 rounded-full mt-2 hover:bg-[#fff53e] bg-[#F0E600] text-black">
+                  <button className="px-5  button-font py-3.5 rounded-full mt-2 hover:bg-[#fff53e] bg-[#F0E600] text-black">
                     {card.buttonText}
                   </button>
                 </div>

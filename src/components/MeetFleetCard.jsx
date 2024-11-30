@@ -15,7 +15,7 @@ const MeetFleetCard = ({ MainImg, heading, hasGradient }) => {
 
         {/* Text Layer */}
         <div
-          className="sm:px-6 px-3 text-[6vw] sm:text-[4vw] md:text-[2.5vw] text-white xl:text-4xl leading-none pb-24 pt-6 z-[4] relative"
+          className="sm:px-6 px-3 text-[6vw]  button-font sm:text-[4vw] md:text-[2.5vw] text-white xl:text-4xl leading-none pb-24 pt-6 z-[4] relative"
           style={
             hasGradient
               ? {
