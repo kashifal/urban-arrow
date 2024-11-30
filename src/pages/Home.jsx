@@ -13,7 +13,7 @@ import Footer from "../components/Footer";
 const Home = () => {
   return (
     <>
-      <div className="h-screen relative w-screen">
+      <div className="md:h-screen relative overflow-x-hidden w-fit">
         <Header />
         <HeroSection />
       </div>

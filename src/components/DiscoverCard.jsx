@@ -31,7 +31,7 @@ const DiscoverCard = () => {
       {discoverCards.map((card) => (
         <div
           key={card.id}
-          className="bg-[#FAFAF0] flex flex-col justify-between  w-[100vw] lg:w-[28%] cursor-pointer text-[#1A1919] overflow-hidden rounded-xl"
+          className="bg-[#FAFAF0] flex flex-col justify-between w-[100vw]  sm:w-[50vw] lg:w-[28%] cursor-pointer text-[#1A1919] overflow-hidden rounded-xl"
         >
           <img
             className="h-[28vh] w-full object-cover"

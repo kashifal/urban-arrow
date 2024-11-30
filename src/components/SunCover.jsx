@@ -3,9 +3,9 @@ import Cycle from '../assets/cycle.jpg'
 
 const SunCover = () => {
   return (
-    <div className="xl:max-w-[86%] text-[#1A1919] mx-auto pb-24 pt-32 max-w-[72rem] px-6 grid md:grid-cols-2 gap-10">
-      <div className="h-full 2xl:ml-20 md:order-2 md:py-0 py-5 order-2 w-fit flex flex-col justify-center">
-        <h1 className="text-[7vw] md:text-[45px] xl:text-[65px]  leading-none ">
+    <div className="xl:max-w-[86%] text-[#1A1919] mx-auto pb-24 pt-32 max-w-[72rem] px-6 grid sm:grid-cols-2 gap-10">
+      <div className="h-full 2xl:ml-20 md:order-2 md:py-0 sm:py-5 order-2 w-fit flex flex-col justify-center">
+        <h1 className="sm:text-[7vw] text-4xl md:text-[45px] xl:text-[65px]  leading-none ">
         Receive a Suncover as a gift now ☀️
         </h1>
         <p className="text-black py-8 font-medium">
@@ -18,7 +18,7 @@ const SunCover = () => {
           Find your dealer
         </button>
       </div>
-      <img src={Cycle} className="lg:h-[40vw] h-[100vw] md:h-[60vw] md:order-1 order-1 2xl:right-10 2xl:relative rounded-xl md:rounded-xl w-full object-cover" alt="" />
+      <img src={Cycle} className="lg:h-[40vw] h-[80vw] sm:h-[40vw] md:h-[40vw] md:order-1 order-1 2xl:right-10 2xl:relative rounded-xl md:rounded-xl w-full object-cover" alt="" />
     </div>
   )
 }

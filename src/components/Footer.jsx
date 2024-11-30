@@ -9,8 +9,8 @@ const Footer = () => {
         <a href="#" className="mx-auto w-fit flex justify-center">
             <img src={Logo} alt="" className="" />
         </a>
-        <div className="sm:flex items-start justify-between mt-12 xl:max-w-[86%] mx-auto max-w-[72rem]  gap-5">
-           <div className="flex items-start gap-12 flex-wrap">
+        <div className="sm:flex grid grid-cols-1 items-start justify-between mt-12 xl:max-w-[86%] mx-auto max-w-[72rem]  gap-5">
+           <div className="flex justify-between items-start gap-12 flex-wrap">
             <div className="flex flex-col gap-1">
                 <a href="#" className="text-[25px] block hover:underline">Configurator</a>
                 <a href="#" className="text-[25px] block hover:underline">Find your dealer</a>
@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
             </div>
           
-            <div className="grid grid-cols-2 sm:mt-0 mt-10 md:grid-cols-3 2xl:grid-cols-5 gap-x-5 2xl:gap-x-7 gap-y-10">
+            <div className="sm:grid flex justify-between flex-wrap grid-cols-2 sm:mt-0 mt-10 md:grid-cols-3 2xl:grid-cols-5 gap-x-5 2xl:gap-x-7 gap-y-10">
             <div className="sm:block hidden">
                 <h4 className="text-[#9A9A94] text-2xl">Products</h4>
                 <div className="flex flex-col mt-4 gap-5">
@@ -75,7 +75,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-wrap items-start justify-between mt-16 xl:max-w-[86%] mx-auto max-w-[72rem]  gap-5">
             <img src={TrustPilot} />
-            <div className="sm:flex hidden flex-col text-[#9A9A94] text-sm items-center">
+            <div className="md:flex hidden flex-col text-[#9A9A94] text-sm items-center">
             <p className="">© 2024 Smart Urban Mobility B.V. All rights reserved</p>
             <a href="#" className="flex underline items-center gap-[1px] hover:underline">Service Center 
             <svg className='size-4' xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 7L7 17M8 7h9v9"/></svg>
@@ -97,7 +97,7 @@ const Footer = () => {
                </a>
             </div>
         </div>
-        <div className="sm:hidden flex mt-10 flex-col text-[#9A9A94] text-sm items-center">
+        <div className="md:hidden flex mt-10 flex-col text-[#9A9A94] text-sm items-center">
             <p className="">© 2024 Smart Urban Mobility B.V. All rights reserved</p>
             <a href="#" className="flex underline items-center gap-[1px] hover:underline">Service Center 
             <svg className='size-4' xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 7L7 17M8 7h9v9"/></svg>

@@ -6,8 +6,9 @@ import meetMan from '../assets/meetMan.jpg';
 const MeetFleet = () => {
   return (
     <div className='bg-white pb-20 xl:max-w-[86%] max-w-[72rem] xl:px-0 px-6  gap-4 mx-auto'>
-    <h1 className="text-[7vw] md:text-[4.9vw] xl:text-[68px]  leading-none ">Meet our fleet</h1>
-    <div className="mt-10 xl:mt-20 flex overflow-auto items-start gap-6 xl:gap-10">
+           <h1 className="text-4xl sm:text-[7vw]  md:text-[5.2vw]  xl:text-[68px]  leading-none ">
+           Meet our fleet</h1>
+    <div className="mt-10 xl:mt-20 flex overflow-auto items-start gap-4 md:gap-6 xl:gap-10">
         <MeetFleetCard MainImg={MeetGirl} heading={'Urban Arrow Family'}  hasGradient={true} />
         <MeetFleetCard MainImg={meetMan} heading={'Urban Arrow Family Smart System'} hasGradient={false} />
     </div>
