@@ -1,8 +1,12 @@
 import React from 'react'
+import Animate from './Animate'
 
 const TryIt = () => {
   return (
-    <div className='bg-white text-[#1A1919] pt-48 md:pb-48 pb-10 max-w-[72rem] xl:max-w-[86%] xl:px-0 px-6 grid lg:grid-cols-2 gap-4 mx-auto'>
+    <Animate>
+    <div
+    id="next-section"
+    className='bg-white text-[#1A1919] pt-48 md:pb-48 pb-10 max-w-[72rem] xl:max-w-[86%] xl:px-0 px-6 grid lg:grid-cols-2 gap-4 mx-auto'>
        
         <h1 className="text-4xl sm:text-[7vw]  md:text-[5.2vw]  xl:text-[68px]  leading-none ">Try it once,<br />
         love it forever.</h1>
@@ -16,7 +20,8 @@ const TryIt = () => {
             </p>
            </div>
         </div>
-    </div>
+      </div>
+    </Animate>
   )
 }
 

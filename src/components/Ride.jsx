@@ -1,8 +1,10 @@
 import React from 'react'
 import SmothRide from '../assets/smothRide.png'
+import Animate from './Animate';
 
 const Ride = () => {
   return (
+    <Animate>
     <div className='2xl:min-h-[50vw] min-h-[60vw] text-[#1A1919] bg-[#FAFAF0] mt-6 grid sm:grid-cols-2 2xl:h-full'>
         <img src={SmothRide} className='w-full h-[50vh] md:h-full object-cover ' alt="" />
         <div className="xl:w-[70%] py-14 md:py-10 w-[95%] md:w-[90%] mx-auto h-full flex flex-col justify-center px-6">
@@ -14,7 +16,8 @@ const Ride = () => {
                 <button className="bg-[#FF8C3C] px-5 hover:bg-[#e78741] py-3.5 rounded-full text-black font-medium">Configure your bike</button>
             </div>
         </div>
-    </div>
+      </div>
+    </Animate>
   )
 }
 

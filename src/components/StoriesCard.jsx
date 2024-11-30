@@ -37,16 +37,7 @@ const App = () => {
       subtitle: 'a story by Seth Williams',
       buttonText: 'Read more',
     },
-    {
-      id: 2,
-      image:
-        'https://cloudinary.pondigital.solutions/urbanarrow/images/c_scale,w_648,h_415/ar_1.5,c_fill/w_auto,c_fill/f_auto,q_auto/v1728985547/UA_MattnPat/UA_MattnPat.jpg?_i=AA',
-      date: 'October 25, 2024',
-      category: 'Update',
-      title: 'Riding the Urban Arrow:',
-      subtitle: 'a story by Jane Doe',
-      buttonText: 'Learn more',
-    },
+     
   
   ];
 

@@ -1,8 +1,10 @@
 import React from 'react'
 import Cycle from '../assets/cycle.jpg'
+import Animate from './Animate';
 
 const SunCover = () => {
   return (
+    <Animate>
     <div className="xl:max-w-[86%] text-[#1A1919] mx-auto pb-24 pt-32 max-w-[72rem] px-6 grid sm:grid-cols-2 gap-10">
       <div className="h-full 2xl:ml-20 md:order-2 md:py-0 sm:py-5 order-2 w-fit flex flex-col justify-center">
         <h1 className="sm:text-[7vw] text-4xl md:text-[45px] xl:text-[65px]  leading-none ">
@@ -20,6 +22,7 @@ const SunCover = () => {
       </div>
       <img src={Cycle} className="lg:h-[40vw] h-[80vw] sm:h-[40vw] md:h-[40vw] md:order-1 order-1 2xl:right-10 2xl:relative rounded-xl md:rounded-xl w-full object-cover" alt="" />
     </div>
+    </Animate>
   )
 }
 

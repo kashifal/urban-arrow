@@ -1,8 +1,10 @@
 import React from "react";
 import UncleWithKids from '../assets/UncleWithKids.png'
+import Animate from './Animate';
 
 const Experience = () => {
   return (
+    <Animate>
     <div className="xl:max-w-[86%] text-[#1A1919] mx-auto  pt-40 pb-14 max-w-[72rem] px-6 grid sm:grid-cols-2 gap-10">
       <div className="h-full sm:order-1 md:py-0  order-2 w-fit flex flex-col justify-center">
         <h1 className="sm:text-[7vw] text-4xl md:text-[45px] xl:text-[65px]  leading-none ">
@@ -21,7 +23,8 @@ const Experience = () => {
       <img src={UncleWithKids} className="lg:h-[40vw] rounded-xl h-[90vw] sm:h-[50vw] md:h-[60vw]   w-full object-cover"  alt="" />
 
       </div>
-    </div>
+      </div>
+      </Animate>
   );
 };
 

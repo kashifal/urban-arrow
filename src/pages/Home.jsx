@@ -9,14 +9,15 @@ import Stories from "../components/Stories";
 import SunCover from "../components/SunCover";
 import Discover from "../components/Discover";
 import Footer from "../components/Footer";
-
+import Splide from "../components/Splide";
 const Home = () => {
   return (
     <>
-      <div className="md:h-screen relative overflow-x-hidden w-fit">
+      <div className="md:min-h-screen relative overflow-x-hidden w-fit">
         <Header />
         <HeroSection />
       </div>
+       
       <TryIt />
       <MeetFleet />
       <Ride />

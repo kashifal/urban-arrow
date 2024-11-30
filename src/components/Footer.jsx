@@ -1,10 +1,12 @@
 import React from 'react'
 import Logo from '../assets/FooLogo.svg'
 import TrustPilot from '../assets/TrustPilot.svg'
+import Animate from './Animate';
 
 
 const Footer = () => {
-  return (
+            return (
+    <Animate>
     <div className='bg-[#FAFAF0] px-4 pb-12 pt-20'>
         <a href="#" className="mx-auto w-fit flex justify-center">
             <img src={Logo} alt="" className="" />
@@ -105,6 +107,7 @@ const Footer = () => {
                     </a>
             </div>
     </div>
+    </Animate>
   )
 }
 
