@@ -9,7 +9,7 @@ const cartSlice = createSlice({
       addToCart: (state, action) => {
         const existingProduct = state.items.find((item) => item.id === action.payload.id);
         if (existingProduct) {
-          // Agar product pehle se hai, uski quantity badha do
+         
           existingProduct.quantity += 1;
         } else {
           // Naya product add karo aur quantity 1 set karo
