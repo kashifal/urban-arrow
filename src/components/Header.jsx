@@ -9,7 +9,7 @@ const Header = ({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="absolute p-[1rem] sm:p-[1.75rem] z-40 top-0 left-0   w-screen min-h-[4.875rem] flex items-center justify-between">
+    <div className=" p-[1rem] absolute sm:p-[1.75rem] z-40 top-0 left-0   w-screen min-h-[4.875rem] flex items-center justify-between">
       {isMenuOpen && (
         <div className="bg-[#FAFAF0]  py-6 px-6 z-[99999999] h-screen fixed top-0 left-0 w-full">
           <div className="flex h-fit flex-wrap items-center justify-between gap-2">
