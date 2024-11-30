@@ -16,7 +16,7 @@ const SunCover = () => {
         <p className="text-black mb-4 font-medium">
         *Both Family and Family Smart System.
         </p>
-        <button className="bg-[#F0E600] w-fit px-[18px] hover:bg-[#e1d83b] py-3.5 rounded-full text-black font-medium">
+        <button className="bg-[#F0E600]  button-font w-fit px-[18px] hover:bg-[#e1d83b] py-3.5 rounded-full text-black font-medium">
           Find your dealer
         </button>
       </div>

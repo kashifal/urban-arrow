@@ -18,7 +18,7 @@ const Footer = () => {
                 <a href="#" className="text-[25px] block hover:underline">Find your dealer</a>
                 <a href="#" className="text-[25px] block hover:underline">Configurator</a>
             </div>
-            <div className="sm:hidden block">
+            <div className="sm:hidden  button-font block">
                 <h4 className="text-[#9A9A94] text-2xl">Products</h4>
                 <div className="flex flex-col mt-4 gap-5">
                     <a href="#" className="block hover:underline">Family</a>
@@ -27,38 +27,38 @@ const Footer = () => {
             </div>
             </div>
           
-            <div className="sm:grid flex justify-between flex-wrap grid-cols-2 sm:mt-0 mt-10 md:grid-cols-3 2xl:grid-cols-5 gap-x-5 2xl:gap-x-7 gap-y-10">
-            <div className="sm:block hidden">
-                <h4 className="text-[#9A9A94] text-2xl">Products</h4>
-                <div className="flex flex-col mt-4 gap-5">
-                    <a href="#" className="block hover:underline">Family</a>
-                    <a href="#" className="block hover:underline">Accessories</a>
+            <div className="sm:grid  button-font flex justify-between flex-wrap grid-cols-2 sm:mt-0 mt-10 md:grid-cols-3 2xl:grid-cols-5 gap-x-5 2xl:gap-x-7 gap-y-10">
+            <div className="sm:block  button-font hidden">
+                <h4 className="text-[#9A9A94]  text-2xl">Products</h4>
+                <div className="flex flex-col  mt-4 gap-5">
+                    <a href="#" className="block  button-font hover:underline">Family</a>
+                    <a href="#" className="block  button-font hover:underline">Accessories</a>
                 </div>
             </div>
             <div className="">
                 <h4 className="text-[#9A9A94] text-2xl">About us</h4>
                 <div className="flex flex-col mt-4 gap-5">
-                    <a href="#" className="block hover:underline">About us</a>
-                    <a href="#" className="block hover:underline">Community</a>
-                    <a href="#" className="block hover:underline">Careers</a>
+                    <a href="#" className="block  button-font hover:underline">About us</a>
+                    <a href="#" className="block  button-font hover:underline">Community</a>
+                    <a href="#" className="block  button-font hover:underline">Careers</a>
                 </div>
             </div>
             <div className="">
                 <h4 className="text-[#9A9A94] text-2xl">Support</h4>
                 <div className="flex flex-col mt-4 gap-5">
-                    <a href="#" className="flex items-center gap-[1px] hover:underline">Service Center 
+                    <a href="#" className="flex  button-font items-center gap-[1px] hover:underline">Service Center 
                     <svg className='size-4' xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 7L7 17M8 7h9v9"/></svg>
                     </a>
-                    <a href="#" className="block hover:underline">Reviews</a>
-                    <a href="#" className="block hover:underline">Documents</a>
-                    <a href="#" className="block hover:underline">Contact</a>
+                    <a href="#" className="block  button-font hover:underline">Reviews</a>
+                    <a href="#" className="block  button-font hover:underline">Documents</a>
+                    <a href="#" className="block  button-font hover:underline">Contact</a>
                 </div>
             </div>
             <div className="">
                 <h4 className="text-[#9A9A94] text-2xl">Dealers</h4>
                 <div className="flex flex-col mt-4 gap-5">
-                <a href="#" className="block hover:underline">Become a dealer</a>
-                    <a href="#" className="flex items-center gap-[1px] hover:underline">Dealer Portal
+                <a href="#" className="block  button-font hover:underline">Become a dealer</a>
+                    <a href="#" className="flex  button-font items-center gap-[1px] hover:underline">Dealer Portal
                     <svg className='size-4' xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 7L7 17M8 7h9v9"/></svg>
 
                     </a>
@@ -67,10 +67,10 @@ const Footer = () => {
             <div className="">
                 <h4 className="text-[#9A9A94] text-2xl">Terms</h4>
                 <div className="flex flex-col mt-4 gap-5">
-                    <a href="#" className="block hover:underline">General terms and conditions</a>
-                    <a href="#" className="block hover:underline">Social media consent statement 📸</a>
-                    <a href="#" className="block hover:underline">Privacy Policy</a>
-                    <a href="#" className="block hover:underline">Cookies 🍪</a>
+                    <a href="#" className="block  button-font hover:underline">General terms and conditions</a>
+                    <a href="#" className="block  button-font hover:underline">Social media consent statement 📸</a>
+                    <a href="#" className="block  button-font hover:underline">Privacy Policy</a>
+                    <a href="#" className="block  button-font hover:underline">Cookies 🍪</a>
                 </div>
             </div>
             </div>
@@ -79,7 +79,7 @@ const Footer = () => {
             <img src={TrustPilot} />
             <div className="md:flex hidden flex-col text-[#9A9A94] text-sm items-center">
             <p className="">© 2024 Smart Urban Mobility B.V. All rights reserved</p>
-            <a href="#" className="flex underline items-center gap-[1px] hover:underline">Service Center 
+            <a href="#" className="flex  button-font underline items-center gap-[1px] hover:underline">Cookie Settings
             <svg className='size-4' xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 7L7 17M8 7h9v9"/></svg>
 
                     </a>
@@ -101,7 +101,7 @@ const Footer = () => {
         </div>
         <div className="md:hidden flex mt-10 flex-col text-[#9A9A94] text-sm items-center">
             <p className="">© 2024 Smart Urban Mobility B.V. All rights reserved</p>
-            <a href="#" className="flex underline items-center gap-[1px] hover:underline">Service Center 
+            <a href="#" className="flex  button-font underline items-center gap-[1px] hover:underline">Cookie Settings
             <svg className='size-4' xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 7L7 17M8 7h9v9"/></svg>
 
                     </a>
