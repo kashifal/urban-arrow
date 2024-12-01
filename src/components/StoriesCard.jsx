@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 // StoriesCard Component
 const StoriesCard = ({ cardData }) => {
@@ -10,7 +10,9 @@ const StoriesCard = ({ cardData }) => {
         alt={cardData.title}
       />
       <div className="px-4 py-5">
-        <h4 className="font-medium">{cardData.date} | {cardData.category}</h4>
+        <h4 className="font-medium">
+          {cardData.date} | {cardData.category}
+        </h4>
         <h1 className="font-medium py-3 text-[28px]">
           {cardData.title}
           <br className="xl:block hidden" /> {cardData.subtitle}
@@ -30,15 +32,13 @@ const App = () => {
     {
       id: 1,
       image:
-        'https://cloudinary.pondigital.solutions/urbanarrow/images/c_scale,w_648,h_487/ar_1.5,c_fill/w_auto,c_fill/f_auto,q_auto/v1730275035/IMG_5772/IMG_5772.jpg?_i=AA',
-      date: 'November 07, 2024',
-      category: 'News',
-      title: 'The Cargo Bike Chronicles:',
-      subtitle: 'a story by Seth Williams',
-      buttonText: 'Read more',
+        "https://cloudinary.pondigital.solutions/urbanarrow/images/c_scale,w_648,h_487/ar_1.5,c_fill/w_auto,c_fill/f_auto,q_auto/v1730275035/IMG_5772/IMG_5772.jpg?_i=AA",
+      date: "November 07, 2024",
+      category: "News",
+      title: "The Cargo Bike Chronicles:",
+      subtitle: "a story by Seth Williams",
+      buttonText: "Read more",
     },
-     
-  
   ];
 
   return (

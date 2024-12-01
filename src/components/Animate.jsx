@@ -1,16 +1,16 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const Animate = ({ children, time }) => {
-    //create a react component for animation on scroll using framer motion
+  //create a react component for animation on scroll using framer motion
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: time}}
+      viewport={{ once: true, amount: time }}
       transition={{
         duration: 0.3,
         ease: "easeOut",
-        delay: time 
+        delay: time,
       }}
     >
       {children}

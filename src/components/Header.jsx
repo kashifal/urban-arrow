@@ -194,8 +194,8 @@ const Header = ({
             console.log("New state:", !isMenuOpen); // Debug log
           }}
           className={`w-9 h-10  cursor-pointer flex flex-col items-center justify-center ${
-              isMenuOpen ? "ml-1" : "ml-0"
-            }
+            isMenuOpen ? "ml-1" : "ml-0"
+          }
             `}
         >
           <div
