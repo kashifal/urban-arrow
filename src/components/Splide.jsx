@@ -1,6 +1,6 @@
-import React from 'react';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css';
+import React from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 
 const CustomCarousel = () => {
   // Add ref for Splide
@@ -9,13 +9,13 @@ const CustomCarousel = () => {
   // Update custom navigation buttons
   const customNext = () => {
     if (splideRef.current) {
-      splideRef.current.go('+1');
+      splideRef.current.go("+1");
     }
   };
 
   const customPrev = () => {
     if (splideRef.current) {
-      splideRef.current.go('-1');
+      splideRef.current.go("-1");
     }
   };
 
@@ -24,10 +24,10 @@ const CustomCarousel = () => {
       <Splide
         ref={splideRef}
         options={{
-          type: 'loop',
+          type: "loop",
           perPage: 3,
           perMove: 1,
-          gap: '1rem',
+          gap: "1rem",
           arrows: false, // Disable default arrows
           pagination: false, // Optional: disable default pagination
           breakpoints: {

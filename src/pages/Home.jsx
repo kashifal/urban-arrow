@@ -10,6 +10,7 @@ import SunCover from "../components/SunCover";
 import Discover from "../components/Discover";
 import Footer from "../components/Footer";
 import Splide from "../components/Splide";
+
 const Home = () => {
   return (
     <>
@@ -17,7 +18,6 @@ const Home = () => {
         <Header />
         <HeroSection />
       </div>
-       
       <TryIt />
       <MeetFleet />
       <Ride />
