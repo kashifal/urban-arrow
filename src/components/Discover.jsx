@@ -23,7 +23,8 @@ const Discover = () => {
 
   const handleSplideMove = () => {
     if (splideRef.current) {
-      setIsBeginning(splideRef.current.splide.index === 0);
+      const isAtBeginning = splideRef.current.splide.index === 0;
+      setIsBeginning(isAtBeginning);
       setIsEnd(splideRef.current.splide.index === stories.length - splideRef.current.splide.options.perPage);
     }
   };
@@ -96,7 +97,7 @@ const Discover = () => {
          
         </div>
       </div>
-      <div className="">
+      <div className={`${isBeginning ? "xl:pl-36" : "pl-0"} pl-0`}>
         <Splide
           ref={splideRef}
           options={{
@@ -105,7 +106,7 @@ const Discover = () => {
             perMove: 1,
             arrows: false,
             pagination: false,
-            gap: '2rem',
+            gap: '3rem',
             speed: 800,
             easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
             breakpoints: {
@@ -123,11 +124,10 @@ const Discover = () => {
           onMove={handleSplideMove}
           onMounted={handleSplideMove}
         >
-          {discoverCards.map((card) => (
-            <SplideSlide key={card.id}  
-           
-            className="bg-[#FAFAF0] flex flex-col justify-between w-[100vw]  sm:w-[50vw] lg:w-[28%] cursor-pointer text-[#1A1919] overflow-hidden rounded-xl">
-               <AnimateLeft>
+          {discoverCards.map((card, index) => (
+            <SplideSlide key={card.id} >
+               <AnimateLeft time={index === 0 ? 0.3 : index === 1 ? 0.2 : index === 2 ? 0.1 : 0.1 } x={"-80%"} >
+              <div className="bg-[#FAFAF0] flex flex-col justify-between  cursor-pointer text-[#1A1919] overflow-hidden rounded-xl">
                 <img
                   className="h-[28vh] w-full object-cover"
                   src={card.image}
@@ -139,6 +139,7 @@ const Discover = () => {
                   <button className="px-5  button-font py-3.5 rounded-full mt-2 hover:bg-[#fff53e] bg-[#F0E600] text-black">
                     {card.buttonText}
                   </button>
+                </div>
                 </div>
                 </AnimateLeft>
             </SplideSlide>

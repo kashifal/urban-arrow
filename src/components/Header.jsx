@@ -11,27 +11,9 @@ const Header = ({
   return (
     <div className=" p-[1rem] absolute sm:p-[1.75rem] z-40 top-0 left-0   w-screen min-h-[4.875rem] flex items-center justify-between">
       {isMenuOpen && (
-        <div className="bg-[#FAFAF0]  py-6 px-6 z-[99999999] h-screen fixed top-0 left-0 w-full">
+        <div className="bg-[#FAFAF0]  py-6 px-6 z-50 h-screen fixed top-0 left-0 w-full">
           <div className="flex h-fit flex-wrap items-center justify-between gap-2">
-            <div
-              onClick={() => setIsMenuOpen(false)}
-              className=" sm:h-[45px]  shadow-lg cursor-pointer z-50 w-[38px] h-[38px] sm:w-[45px] bg-white rounded-full flex items-center justify-center left-0 top-20"
-            >
-              <svg
-                className="size-6"
-                xmlns="http://www.w3.org/2000/svg"
-                width="1em"
-                height="1em"
-                viewBox="0 0 15 15"
-              >
-                <path
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                  d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
+
             <div className="mx-auto">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -173,23 +155,31 @@ const Header = ({
         </div>
       )}
 
-      <div
-        onClick={() => setIsMenuOpen(true)}
-        className=" sm:h-[45px]  shadow-lg cursor-pointer z-50 w-[38px] h-[38px] sm:w-[45px] bg-white rounded-full flex items-center justify-center left-0 top-20"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          className="size-6"
+      <div className="sm:h-[45px] shadow-lg cursor-pointer z-50 w-[38px] h-[38px] sm:w-[45px] bg-white rounded-full flex items-center justify-center left-0 top-20">
+        <div
+          onClick={() => {
+            console.log('Current state:', isMenuOpen); // Debug log
+            setIsMenuOpen(!isMenuOpen);
+            console.log('New state:', !isMenuOpen); // Debug log
+          }}
+          className="w-9 h-10 cursor-pointer flex flex-col items-center justify-center"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5"
-          />
-        </svg>
+          <div
+            className={`w-[50%] h-[2px] bg-black rounded-sm transition-all duration-300 origin-left translate-y-[0.45rem] ${
+              isMenuOpen ? 'rotate-[-45deg]' : ''
+            }`}
+          ></div>
+          <div
+            className={`w-[50%] h-[2px] bg-black rounded-md transition-all duration-300 origin-center ${
+              isMenuOpen ? 'hidden' : ''
+            }`}
+          ></div>
+          <div
+            className={`w-[50%] h-[2px] bg-black rounded-md transition-all duration-300 origin-left -translate-y-[0.45rem] ${
+              isMenuOpen ? 'rotate-[45deg]' : ''
+            }`}
+          ></div>
+        </div>
       </div>
       <svg
         xmlns="http://www.w3.org/2000/svg"

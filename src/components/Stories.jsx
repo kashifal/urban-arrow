@@ -38,7 +38,7 @@ const Stories = () => {
       buttonText: 'Read more',
     },
     {
-      id: 4,
+      id: 3,
       image: 'https://cloudinary.pondigital.solutions/urbanarrow/images/c_scale,w_648,h_487/ar_1.5,c_fill/w_auto,c_fill/f_auto,q_auto/v1730275035/IMG_5772/IMG_5772.jpg?_i=AA',
       date: 'November 08, 2024',
       category: 'News',
@@ -46,6 +46,7 @@ const Stories = () => {
       subtitle: 'the future of city transport',
       buttonText: 'Read more',
     },
+    
     // Add more stories as needed
   ];
 
@@ -116,7 +117,7 @@ const Stories = () => {
           >
             {stories.map((story, index) => (
               <SplideSlide key={story.id}>
-                <AnimateLeft  >
+                 <AnimateLeft time={index === 0 ? 0.3 : index === 1 ? 0.2 : index === 2 ? 0.1 : 0.1 } x={"-80%"}>
                   <div className="bg-white w-full cursor-pointer text-[#1A1919] overflow-hidden rounded-xl">
                     <img
                       className="h-[35vh] w-full object-cover"

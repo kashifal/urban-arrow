@@ -31,20 +31,20 @@ const MeetFleet = () => {
     }
   };
   return (
-    <Animate>
+   
       <div className='bg-white pb-20 xl:max-w-[86%] max-w-[72rem] xl:px-0 px-6  gap-4 mx-auto'>
         <h1 className="text-4xl sm:text-[7vw]  md:text-[5.2vw]  xl:text-[68px]  leading-none ">
           Meet our fleet</h1>
-        <div className="mt-10 md:grid md:grid-cols-2 lg:grid-cols-3 hidden xl:mt-20  overflow-auto items-start gap-4 md:gap-6 xl:gap-10">
-          <AnimateLeft>
-          <MeetFleetCard MainImg={MeetGirl} heading={'Urban Arrow Family'} hasGradient={true} />
+        <div className="mt-10 hidden md:grid md:grid-cols-2 lg:grid-cols-3 xl:mt-20 items-start gap-4 md:gap-6 xl:gap-10">
+          <AnimateLeft time={0.3} x={"-80%"}>
+            <MeetFleetCard MainImg={MeetGirl} heading={'Urban Arrow Family'} hasGradient={true} />
           </AnimateLeft>
-          <AnimateLeft>
-          <MeetFleetCard MainImg={meetMan} heading={'Urban Arrow Family Smart System'} hasGradient={false} />
+          <AnimateLeft time={0.2} x={"-80%"}>
+            <MeetFleetCard MainImg={meetMan} heading={'Urban Arrow Family Smart System'} hasGradient={false} />
           </AnimateLeft>  
-          <AnimateLeft>
-          <MeetFleetCard MainImg={'https://cloudinary.pondigital.solutions/urbanarrow/images/c_scale,w_448,h_631,dpr_2/ar_0.65,c_fill/w_auto,c_fill/f_auto,q_auto/v1727789784/2T6A9317_edited/2T6A9317_edited.png?_i=AA'} heading={'Test Arrow'} hasGradient={false} />
-          </AnimateLeft>
+          <AnimateLeft time={0.1} x={"-80%"}>
+            <MeetFleetCard MainImg={'https://cloudinary.pondigital.solutions/urbanarrow/images/c_scale,w_448,h_631,dpr_2/ar_0.65,c_fill/w_auto,c_fill/f_auto,q_auto/v1727789784/2T6A9317_edited/2T6A9317_edited.png?_i=AA'} heading={'Test Arrow'} hasGradient={false} />
+          </AnimateLeft> 
         </div>
         <Splide
           className="md:hidden mt-20 flex"
@@ -74,17 +74,21 @@ const MeetFleet = () => {
           onMove={handleSplideMove}
           onMounted={handleSplideMove}
         >
-          <SplideSlide>
+          <SplideSlide >
+          <AnimateLeft time={0.3} x={"-80%"}>
             <MeetFleetCard MainImg={MeetGirl} heading={'Urban Arrow Family'} hasGradient={true} />
+          </AnimateLeft>
+          </SplideSlide>
+              <SplideSlide>
+          <AnimateLeft time={0.2} x={"-80%"}>
+            <MeetFleetCard MainImg={meetMan} heading={'Urban Arrow Family Smart System'} hasGradient={false} />
+          </AnimateLeft>
 
           </SplideSlide>
           <SplideSlide>
-            <MeetFleetCard MainImg={MeetGirl} heading={'Urban Arrow Family'} hasGradient={true} />
-
-          </SplideSlide>
-          <SplideSlide>
-            <MeetFleetCard MainImg={MeetGirl} heading={'Urban Arrow Family'} hasGradient={true} />
-
+          <AnimateLeft time={0.1} x={"-80%"}> 
+            <MeetFleetCard MainImg={'https://cloudinary.pondigital.solutions/urbanarrow/images/c_scale,w_448,h_631,dpr_2/ar_0.65,c_fill/w_auto,c_fill/f_auto,q_auto/v1727789784/2T6A9317_edited/2T6A9317_edited.png?_i=AA'} heading={'Test Arrow'} hasGradient={false} />
+          </AnimateLeft>
           </SplideSlide>
         </Splide>
         <div className="flex justify-end mt-10 md:hidden  items-center gap-1.5">
@@ -100,7 +104,7 @@ const MeetFleet = () => {
             </div>
         </div>
       </div>
-    </Animate>
+   
   )
 }
 

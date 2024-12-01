@@ -1,14 +1,17 @@
 import { motion } from 'framer-motion'; 
 
-const AnimateLeft = ({ children }) => {
+const AnimateLeft = ({ children, time  , x   }) => {
     return (
       <motion.div
-        initial={{ opacity: 0, x: -150 }}  // Changed y to x with negative value
-        whileInView={{ opacity: 1, x: 0 }}  // Changed y to x
-        viewport={{ once: false, amount: 0.3 }}
+        initial={{ opacity: 0, x: x }}  // Reduced initial offset
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
         transition={{
-          duration: 0.5,  // Slightly increased duration for smoother animation
+          duration: 0.1,
           ease: "easeOut",
+          type: "spring",  // Added spring type for smoother animation
+          stiffness: 50,    // Lower stiffness for gentler movement
+          delay: time *2 // optional: add a delay based on time
         }}
       >
         {children}
