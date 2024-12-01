@@ -12,9 +12,8 @@ const Header = ({
     <div className=" p-[1rem] absolute sm:p-[1.75rem] z-40 top-0 left-0   w-screen min-h-[4.875rem] flex items-center justify-between">
       {isMenuOpen && (
         <div className="bg-[#FAFAF0]  py-6 px-6 z-50 h-screen fixed top-0 left-0 w-full">
-          <div className="flex h-fit flex-wrap items-center justify-between gap-2">
-
-            <div className="mx-auto">
+          <div className="flex h-fit flex-wrap md:flex-nowrap items-center justify-between gap-2">
+            <div className="mx-auto md:w-auto w-full flex justify-center md:relative left-[106px]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="220"
@@ -29,7 +28,7 @@ const Header = ({
                 ></path>
               </svg>
             </div>
-            <div className="button-font font-medium sm:mx-0 mx-auto overflow-hidden shadow-lg cursor-pointer z-50  bg-white rounded-full flex items-center justify-center">
+            <div className="button-font font-medium md:mt-0 mt-5 md:mx-0 mx-auto overflow-hidden shadow-lg cursor-pointer z-50  bg-white rounded-full flex items-center justify-center">
               <div className="flex items-center px-4 py-1 hover:bg-[#C8C8B9] hover:bg-opacity-30  gap-3">
                 <img
                   src="https://urbanarrow.com/app/uploads/flags/flag-na.svg"
@@ -45,109 +44,141 @@ const Header = ({
               </div>
             </div>
           </div>
-          <div className="flex  flex-col mx-auto items-center justify-center h-full w-full sm:-mt-20">
-            <div className=" grid grid-cols-2  md:whitespace-nowrap md:grid-cols-4 xl:grid-cols-5 items-start justify-between xl:max-w-[90%] w-full mx-auto max-w-[80rem]  gap-20">
-              <div className="flex justify-between items-start gap-12 flex-wrap">
+          <div className="flex  flex-col mx-auto items-center justify-center h-full w-full sm:mt-10 md:-mt-20">
+            <div className=" md:flex items-start gap-x-28 grid-cols-2  md:whitespace-nowrap md:grid-cols-4 xl:grid-cols-5  xl:max-w-[90%] w-full mx-auto max-w-[80rem] ">
+              <div className="md:flex mt-10 gap-y-10 gap-x-3 grid grid-cols-2 justify-between items-start flex-wrap">
                 <div className="flex flex-col gap-1">
-                  <a href="#" className="text-[25px] block hover:underline">
+                  <a
+                    href="#"
+                    className="md:text-[25px] text-xl sm:text-[4vw] block hover:underline"
+                  >
                     Configurator
                   </a>
-                  <a href="#" className="text-[25px] block hover:underline">
+                  <a
+                    href="#"
+                    className="md:text-[25px] text-xl sm:text-[4vw] block hover:underline"
+                  >
                     Find your dealer
                   </a>
-                  <a href="#" className="text-[25px] block hover:underline">
+                  <a
+                    href="#"
+                    className="md:text-[25px] text-xl sm:text-[4vw] block hover:underline"
+                  >
                     Configurator
                   </a>
+                </div>
+                <div className="md:hidden block ">
+                  <h4 className="text-[#9A9A94] text-xl sm:text-[4vw] md:text-2xl">
+                    Products
+                  </h4>
+                  <div className="flex flex-col md:text-[16px] sm:text-[2vw] text-sm mt-3 sm:mt-5 gap-3 sm:gap-5">
+                    <a href="#" className="block button-font hover:underline">
+                      Family
+                    </a>
+                    <a href="#" className="block button-font hover:underline">
+                      Accessories
+                    </a>
+                  </div>
                 </div>
               </div>
 
-              <div className="">
-                <h4 className="text-[#9A9A94] text-2xl">Products</h4>
-                <div className="flex flex-col mt-4 gap-5">
-                  <a href="#" className="block button-font hover:underline">
-                    Family
-                  </a>
-                  <a href="#" className="block button-font hover:underline">
-                    Accessories
-                  </a>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-y-10 mt-10 gap-x-3 w-full">
+                <div className="hidden md:block ">
+                  <h4 className="text-[#9A9A94] text-xl sm:text-[4vw] md:text-2xl">
+                    Products
+                  </h4>
+                  <div className="flex flex-col md:text-[16px] sm:text-[2vw] text-sm mt-3 sm:mt-5 gap-3 sm:gap-5">
+                    <a href="#" className="block button-font hover:underline">
+                      Family
+                    </a>
+                    <a href="#" className="block button-font hover:underline">
+                      Accessories
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div className="">
-                <h4 className="text-[#9A9A94] text-2xl">About us</h4>
-                <div className="flex flex-col mt-4 gap-5">
-                  <a href="#" className="block button-font hover:underline">
+                <div className="">
+                  <h4 className="text-[#9A9A94] text-xl sm:text-[4vw] md:text-2xl">
                     About us
-                  </a>
-                  <a href="#" className="block button-font hover:underline">
-                    Community
-                  </a>
-                  <a href="#" className="block button-font hover:underline">
-                    Careers
-                  </a>
+                  </h4>
+                  <div className="flex flex-col md:text-[16px] sm:text-[2vw] text-sm mt-3 sm:mt-5 gap-3 sm:gap-5">
+                    <a href="#" className="block button-font hover:underline">
+                      About us
+                    </a>
+                    <a href="#" className="block button-font hover:underline">
+                      Community
+                    </a>
+                    <a href="#" className="block button-font hover:underline">
+                      Careers
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div className="">
-                <h4 className="text-[#9A9A94] text-2xl">Support</h4>
-                <div className="flex flex-col mt-4 gap-5">
-                  <a
-                    href="#"
-                    className="flex items-center button-font gap-[1px] hover:underline"
-                  >
-                    Service Center
-                    <svg
-                      className="size-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1em"
-                      height="1em"
-                      viewBox="0 0 24 24"
+                <div className="">
+                  <h4 className="text-[#9A9A94] text-xl sm:text-[4vw] md:text-2xl">
+                    Support
+                  </h4>
+                  <div className="flex flex-col md:text-[16px] sm:text-[2vw] text-sm mt-3 sm:mt-5 gap-3 sm:gap-5">
+                    <a
+                      href="#"
+                      className="flex items-center button-font gap-[1px] hover:underline"
                     >
-                      <path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M17 7L7 17M8 7h9v9"
-                      />
-                    </svg>
-                  </a>
-                  <a href="#" className="block button-font hover:underline">
-                    Reviews
-                  </a>
-                  <a href="#" className="block button-font hover:underline">
-                    Documents
-                  </a>
-                  <a href="#" className="block button-font hover:underline">
-                    Contact
-                  </a>
+                      Service Center
+                      <svg
+                        className="size-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="1em"
+                        height="1em"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M17 7L7 17M8 7h9v9"
+                        />
+                      </svg>
+                    </a>
+                    <a href="#" className="block button-font hover:underline">
+                      Reviews
+                    </a>
+                    <a href="#" className="block button-font hover:underline">
+                      Documents
+                    </a>
+                    <a href="#" className="block button-font hover:underline">
+                      Contact
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div className="">
-                <h4 className="text-[#9A9A94] text-2xl">Dealers</h4>
-                <div className="flex flex-col mt-4 gap-5">
-                  <a href="#" className="block button-font hover:underline">
-                    Become a dealer
-                  </a>
-                  <a
-                    href="#"
-                    className="flex button-font items-center gap-[1px] hover:underline"
-                  >
-                    Dealer Portal
-                    <svg
-                      className="size-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1em"
-                      height="1em"
-                      viewBox="0 0 24 24"
+                <div className="">
+                  <h4 className="text-[#9A9A94] text-xl sm:text-[4vw] md:text-2xl">
+                    Dealers
+                  </h4>
+                  <div className="flex flex-col md:text-[16px] sm:text-[2vw] text-sm mt-3 sm:mt-5 gap-3 sm:gap-5">
+                    <a href="#" className="block button-font hover:underline">
+                      Become a dealer
+                    </a>
+                    <a
+                      href="#"
+                      className="flex button-font items-center gap-[1px] hover:underline"
                     >
-                      <path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M17 7L7 17M8 7h9v9"
-                      />
-                    </svg>
-                  </a>
+                      Dealer Portal
+                      <svg
+                        className="size-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="1em"
+                        height="1em"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M17 7L7 17M8 7h9v9"
+                        />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -155,28 +186,31 @@ const Header = ({
         </div>
       )}
 
-      <div className="sm:h-[45px] shadow-lg cursor-pointer z-50 w-[38px] h-[38px] sm:w-[45px] bg-white rounded-full flex items-center justify-center left-0 top-20">
+      <div className="sm:h-[45px]  shadow-lg cursor-pointer z-50 w-[38px] h-[38px] sm:w-[45px] bg-white rounded-full flex items-center justify-center left-0 top-20">
         <div
           onClick={() => {
-            console.log('Current state:', isMenuOpen); // Debug log
+            console.log("Current state:", isMenuOpen); // Debug log
             setIsMenuOpen(!isMenuOpen);
-            console.log('New state:', !isMenuOpen); // Debug log
+            console.log("New state:", !isMenuOpen); // Debug log
           }}
-          className="w-9 h-10 cursor-pointer flex flex-col items-center justify-center"
+          className={`w-9 h-10  cursor-pointer flex flex-col items-center justify-center ${
+              isMenuOpen ? "ml-1" : "ml-0"
+            }
+            `}
         >
           <div
             className={`w-[50%] h-[2px] bg-black rounded-sm transition-all duration-300 origin-left translate-y-[0.45rem] ${
-              isMenuOpen ? 'rotate-[-45deg]' : ''
+              isMenuOpen ? "rotate-[-45deg]" : ""
             }`}
           ></div>
           <div
             className={`w-[50%] h-[2px] bg-black rounded-md transition-all duration-300 origin-center ${
-              isMenuOpen ? 'hidden' : ''
+              isMenuOpen ? "hidden" : ""
             }`}
           ></div>
           <div
             className={`w-[50%] h-[2px] bg-black rounded-md transition-all duration-300 origin-left -translate-y-[0.45rem] ${
-              isMenuOpen ? 'rotate-[45deg]' : ''
+              isMenuOpen ? "rotate-[45deg]" : ""
             }`}
           ></div>
         </div>
