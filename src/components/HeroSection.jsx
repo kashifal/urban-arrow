@@ -19,7 +19,7 @@ function HeroSection() {
   };
 
   return (
-    <div className="lg:h-screen overlflow-hidden z-[4] min-h-[120vh] md:min-h-[60vh] w-screen relative">
+    <div className="lg:h-screen overlflow-hidden z-[4] min-h-[110vh] md:min-h-[60vh] w-screen relative">
       <video
         className="h-full z-30 object-cover w-screen top-0 left-0 absolute"
         

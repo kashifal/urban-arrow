@@ -75,6 +75,27 @@ const Footer = () => {
             </div>
             </div>
         </div>
+        
+      <section className="rounded-3xl  max-w-7xl mx-auto mt-20 mb-10 bg-[#C0E6D7]   py-14">
+        <div className="flex  flex-col items-center justify-between gap-6 px-4 md:px-8 lg:flex-row">
+          <div className="mx-auto text-center md:flex-1 md:text-left">
+            <h2 className="text-center text-3xl leading-tight md:text-[2.8vw]">Meld je aan voor de nieuwsbrief van Urban Arrow</h2>
+            <p className="mt-4 text-center ">En mis geen nieuws, inspiratie, promoties en exclusieve evenementen</p>
+          </div>
+          <div className="flex  w-full flex-col md:items-start lg:w-auto lg:flex-1">
+            <form className="flex w-full flex-col gap-1 sm:flex-row sm:items-center lg:w-auto">
+              <input type="text" placeholder="Voornaam" className="w-full button-font rounded-full border-2 border-gray-300 px-5 py-2.5 text-black placeholder:text-black focus:border-black focus:outline-none lg:w-auto" />
+              <input type="email" placeholder="E-mail" className="w-full button-font rounded-full border-2 border-gray-300 px-5 py-2.5 text-black placeholder:text-black focus:border-black focus:outline-none lg:w-auto" />
+              <button type="submit" className="rounded-full button-font bg-black px-6 py-2 text-white transition hover:bg-opacity-80">Abonneren</button>
+            </form>
+            <div className="mt-4 flex items-center gap-2 text-left text-lg">
+              <input type="checkbox" id="urbanArrow" className="h-4 w-4 rounded border-gray-300 focus:ring-green-500" />
+              <label htmlFor="urbanArrow text-black button-font">Ja! Ik heb een Urban Arrow.</label>
+            </div>
+            <p className="mt-2 text-sm text-gray-600 button-font md:text-left">Door op 'Abonneren' te klikken ga ik ermee akkoord dat Urban Arrow contact met mij opneemt in lijn met de Privacy Policy.</p>
+          </div>
+        </div>
+      </section>
         <div className="flex flex-wrap items-start justify-between mt-16 xl:max-w-[86%] mx-auto max-w-[72rem]  gap-5">
             <img src={TrustPilot} />
             <div className="md:flex hidden flex-col text-[#9A9A94] text-sm items-center">

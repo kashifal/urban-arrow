@@ -127,7 +127,7 @@ const Discover = () => {
           {discoverCards.map((card, index) => (
             <SplideSlide key={card.id} >
                <AnimateLeft time={index === 0 ? 0.3 : index === 1 ? 0.2 : index === 2 ? 0.1 : 0.1 } x={"-80%"} >
-              <div className="bg-[#FAFAF0] flex flex-col justify-between  cursor-pointer text-[#1A1919] overflow-hidden rounded-xl">
+              <div className="bg-[#FAFAF0] h-[80vh] flex flex-col justify-between  cursor-pointer text-[#1A1919] overflow-hidden rounded-xl">
                 <img
                   className="h-[28vh] w-full object-cover"
                   src={card.image}
